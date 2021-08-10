@@ -4,11 +4,11 @@
 
 [(2) 前端界面设计](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#2-%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1)
 
-​	[2.1 设计参考](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#21-%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83)
+​		[2.1 设计参考](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#21-%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83)
 
-​		[2.1.1 ClubSystemVisualReference 设计效果图](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#211-clubsystemvisualreference-%E8%AE%BE%E8%AE%A1%E6%95%88%E6%9E%9C%E5%9B%BE)
+​				[2.1.1 ClubSystemVisualReference 设计效果图](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#211-clubsystemvisualreference-%E8%AE%BE%E8%AE%A1%E6%95%88%E6%9E%9C%E5%9B%BE)
 
-​		[2.1.2 CustomerRequiresDiagram 功能结构](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#212-customerrequiresdiagram-%E5%8A%9F%E8%83%BD%E7%BB%93%E6%9E%84)
+​				[2.1.2 CustomerRequiresDiagram 功能结构](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#212-customerrequiresdiagram-%E5%8A%9F%E8%83%BD%E7%BB%93%E6%9E%84)
 
 ## (1) Markdown说明文档编写范式
 
