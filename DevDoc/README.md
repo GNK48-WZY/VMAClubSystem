@@ -2,11 +2,11 @@
 
 [(1) Markdown文档编写范式](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#1-markdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99%E8%8C%83%E5%BC%8F)
 
-----[1.1 范式](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#21-%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83)
+----[1.1 范式](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#11-%E8%8C%83%E5%BC%8F)
 
-----[1.2 ImageHostingBackup 文件夹](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#21-%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83)
+----[1.2 ImageHostingBackup 文件夹](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#12-imagehostingbackup-%E6%96%87%E4%BB%B6%E5%A4%B9)
 
---------[1.2.1 写文档时如何嵌入图片](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#211-clubsystemvisualreference-%E8%AE%BE%E8%AE%A1%E6%95%88%E6%9E%9C%E5%9B%BE)
+--------[1.2.1 写文档时如何嵌入图片](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#121-%E5%86%99%E6%96%87%E6%A1%A3%E6%97%B6%E5%A6%82%E4%BD%95%E5%B5%8C%E5%85%A5%E5%9B%BE%E7%89%87)
 
 [(2) 前端界面设计](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#2-%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1)
 
