@@ -16,11 +16,11 @@
 
 --------[2.1.2 CustomerRequiresDiagram 功能结构](./README.md#212-customerrequiresdiagram-功能结构)
 
-[3 必装开发环境]()
+[3 必装开发环境](./DevDoc#3-必装开发环境)
 
-----[3.1 MySQL服务端](./README.md#21-设计参考)
+----[3.1 MySQL服务端](./DevDoc#31-mysql服务端)
 
---------[3.1.1 MySQL服务端的安装]()
+--------[3.1.1 MySQL服务端的安装](./DevDoc#311-mysql服务端的安装)
 
 ## 1 Markdown说明文档编写范式
 

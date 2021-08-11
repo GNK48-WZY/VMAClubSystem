@@ -16,11 +16,11 @@
 
 --------[2.1.2 CustomerRequiresDiagram Functional Structure](./README_eng.md#212-customerrequiresdiagram-functional-structure)
 
-[3 Required Development Environment]()
+[3 Required Development Environment](./README_eng.md#3-required-development-environment)
 
-----[3.1 MySQL Server](./README.md#21-设计参考)
+----[3.1 MySQL Server](./README_eng.md#31-mysql-server)
 
---------[3.1.1 Install MySQL Server]()
+--------[3.1.1 Install MySQL Server](./README_eng.md#311-install-mysql-server)
 
 ## 1 Markdown README Document Normal Form
 
