@@ -24,3 +24,5 @@
 
 ------------[3.1.1 Install MySQL Server](./DevDoc/README_eng.md#311-install-mysql-server)
 
+------------[3.1.2 Node.js Connect MySQL](./DevDoc/README_eng.md#311-install-mysql-server)
+
