@@ -16,13 +16,7 @@
 
 --------[2.1.2 CustomerRequiresDiagram 功能结构](./README.md#212-customerrequiresdiagram-功能结构)
 
-[3 必装开发环境](./DevDoc#3-必装开发环境)
-
-----[3.1 MySQL服务端](./DevDoc#31-mysql服务端)
-
---------[3.1.1 MySQL服务端的安装](./DevDoc#311-mysql服务端的安装)
-
---------[3.1.2 Node.js连接MySQL数据库](./DevDoc#311-mysql服务端的安装)
+[3 开发环境](./DevDoc#3-必装开发环境)
 
 ## 1 Markdown说明文档编写范式
 
@@ -69,14 +63,5 @@ C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./Ima
 
 [![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./\ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
 
-## 3 必装开发环境
+## 3 开发环境
 
-### 3.1 MySQL服务端
-
-#### 3.1.1 MySQL服务端的安装
-
-详见[Ins_MySQL](./Ins_MySQL.md)安装说明。
-
-#### 3.1.2 Node.js连接MySQL数据库
-
-详见[RUNOOB](https://www.runoob.com/nodejs/nodejs-mysql.html)教程。

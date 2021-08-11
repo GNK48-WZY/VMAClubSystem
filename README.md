@@ -18,10 +18,5 @@
 
 ------------[2.1.2 CustomerRequiresDiagram 功能结构](./DevDoc/README.md#212-customerrequiresdiagram-功能结构)
 
-----[3 必装开发环境](./DevDoc/README.md#3-必装开发环境)
+----[3 开发环境](./DevDoc/README.md#3-必装开发环境)
 
---------[3.1 MySQL服务端](./DevDoc/README.md#31-mysql服务端)
-
-------------[3.1.1 MySQL服务端的安装](./DevDoc/README.md#311-mysql服务端的安装)
-
-------------[3.1.2 Node.js连接MySQL数据库](./DevDoc/README.md#311-mysql服务端的安装)
