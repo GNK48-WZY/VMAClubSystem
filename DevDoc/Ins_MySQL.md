@@ -1,10 +1,10 @@
 # 说明: 配置MySQL开发环境
 
-[前言: 简述MySQL数据库在项目中的结构]()
+[前言: 简述MySQL数据库在项目中的结构](./DevDoc/Ins_MySQL.md#前言-简述mysql数据库在项目中的结构)
 
-[1 安装MySQL服务器]()
+[1 安装MySQL服务器](./DevDoc/Ins_MySQL.md#1-安装mysql服务器)
 
-[2 项目中同步数据库文件]()
+[2 项目中同步数据库文件](./DevDoc/Ins_MySQL.md#2-项目中同步数据库文件)
 
 ## 前言: 简述MySQL数据库在项目中的结构
 
@@ -53,11 +53,11 @@
 
 项目发布页处可以下载到msi安装包, 也可自行在官网下载, 统一版本号8.0.26.0。
 
-<a href="./ImageHostingBackup/Ins_MySQL/1.png" target="_blank"><img src="https://i.postimg.cc/67gB3jKM/1.png" alt="1"/></a> <a href="./ImageHostingBackup/Ins_MySQL/2.png" target="_blank"><img src="https://i.postimg.cc/jWLsRVpW/2.png" alt="2"/></a> 
+<a href="./ImageHostingBackup/Ins_MySQL/1.png" target="_blank"><img  align="left" width="50%" src="https://i.postimg.cc/PxrJS9Rn/1.png" alt="1"/></a><a href="./ImageHostingBackup/Ins_MySQL/2.png" target="_blank"><img  align="right" width="50%" src="https://i.postimg.cc/xdPqyngP/2.png" alt="2"/></a> 
 
 安装包中有组件选择, 此处只需添加8.0.26.0的Server即可。
 
-<a href="./ImageHostingBackup/Ins_MySQL/11.png" target="_blank"><img src="https://i.postimg.cc/47wy3v8y/11.png" alt="11"/></a> <a href="./ImageHostingBackup/Ins_MySQL/12.png" target="_blank"><img src="https://i.postimg.cc/RJFFJ38R/12.png" alt="12"/></a> 
+<a href="./ImageHostingBackup/Ins_MySQL/11.png" target="_blank"><img align="left" width="50%" src="https://i.postimg.cc/kGPbffKQ/11.png" alt="11"/></a><a href="./ImageHostingBackup/Ins_MySQL/12.png" target="_blank"><img align="right" width="50%" src="https://i.postimg.cc/GtPsNGxZ/12.png" alt="12"/></a> 
 
 其他步骤按默认即可, 唯一注意在填写密码处, 统一设定密码为【6lXVNlfK_ZX&】。
 
