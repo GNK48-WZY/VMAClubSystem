@@ -1,20 +1,20 @@
 # Develop Document [-中文版](./README.md)
 
-[(1) Markdown README Document Normal Form](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#1-markdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99%E8%8C%83%E5%BC%8F)
+[(1) Markdown README Document Normal Form](./README_eng.md#1-markdown-readme-document-normal-form)
 
-[    1.1 Normal Form](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#11-%E8%8C%83%E5%BC%8F)
+----[1.1 Normal Form](./README_eng.md#11-normal-form)
 
-[		1.2 ImageHostingBackup Folder](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#12-imagehostingbackup-%E6%96%87%E4%BB%B6%E5%A4%B9)
+----[1.2 ImageHostingBackup Folder](./README_eng.md#12-imagehostingbackup-folder)
 
-[				1.2.1 How to Inset Images in Documents](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#121-%E5%86%99%E6%96%87%E6%A1%A3%E6%97%B6%E5%A6%82%E4%BD%95%E5%B5%8C%E5%85%A5%E5%9B%BE%E7%89%87)
+--------[1.2.1 How to Inset Images in Documents](./README_eng.md#121-how-to-inset-images-in-documents)
 
-[(2) GUI Design](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#2-%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1)
+[(2) GUI Design](./README_eng.md#2-gui-design)
 
-----[2.1 Design Reference](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#21-%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83)
+----[2.1 Design Reference](./README_eng.md#21-design-reference)
 
---------[2.1.1 ClubSystemVisualReference Design Effect Rendering](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#211-clubsystemvisualreference-%E8%AE%BE%E8%AE%A1%E6%95%88%E6%9E%9C%E5%9B%BE)
+--------[2.1.1 ClubSystemVisualReference Design Effect Rendering](./README_eng.md#211-clubsystemvisualreference-design-effect-rendering)
 
---------[2.1.2 CustomerRequiresDiagram Functional Structure](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#212-customerrequiresdiagram-%E5%8A%9F%E8%83%BD%E7%BB%93%E6%9E%84)
+--------[2.1.2 CustomerRequiresDiagram Functional Structure](./README_eng.md#212-customerrequiresdiagram-functional-structure)
 
 ## (1) Markdown README Document Normal Form
 
