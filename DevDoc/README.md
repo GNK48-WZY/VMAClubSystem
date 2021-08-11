@@ -24,7 +24,7 @@
 2. 所有文档应添加目录, 目录格式参考本文所用的[TOC]风格
 3. 各级段落使用markdown自带的#符 (如##是二级标题, ###是三级标题), 并从二级标题开始标序, 便于目录查阅
 4. 文档内使用图片, 需在两处上传, 一处任意第三方图床, 另一处在项目[ImageHostingBackup](./ImageHostingBackup)文件夹内, 创建与文档同名的文件夹, 保存备份 (因为直接使用GitHub做为图床时常遇到加载异常, 不便阅读)
-5. 参阅
+5. 参阅《[1.2 ImageHostingBackup 文件夹](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#12-imagehostingbackup-%E6%96%87%E4%BB%B6%E5%A4%B9)》
 6. 如有必要编写英文说明文档, 可在中文文档完成后翻译, 另存为<原文件名_eng.md>文件, 放在同一处, 并在文件头标题处增加跳转链接
 
 ### 1.2 ImageHostingBackup 文件夹
