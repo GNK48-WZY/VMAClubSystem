@@ -1,6 +1,6 @@
 # Develop Document 开发文档 [-English version](./README_eng.md)
 
-[(1) Markdown文档编写范式](./README.md#1-markdown说明文档编写范式)
+[1 Markdown文档编写范式](./README.md#1-markdown说明文档编写范式)
 
 ----[1.1 范式](./README.md#11-范式)
 
@@ -8,7 +8,7 @@
 
 --------[1.2.1 写文档时如何嵌入图片](./README.md#121-写文档时如何嵌入图片)
 
-[(2) 前端界面设计](./README.md#2-前端界面设计)
+[2 前端界面设计](./README.md#2-前端界面设计)
 
 ----[2.1 设计参考](./README.md#21-设计参考)
 
@@ -16,7 +16,13 @@
 
 --------[2.1.2 CustomerRequiresDiagram 功能结构](./README.md#212-customerrequiresdiagram-功能结构)
 
-## (1) Markdown说明文档编写范式
+[3 必装开发环境]()
+
+----[3.1 MySQL服务端](./README.md#21-设计参考)
+
+--------[3.1.1 MySQL服务端的安装]()
+
+## 1 Markdown说明文档编写范式
 
 ### 1.1 范式
 
@@ -49,7 +55,7 @@ B处是图床URL, 图床随作者随意使用任意图床不限, 可在GitHub上
 
 C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./ImageHostingBackup)文件夹下的备份的路径, 注意使用相对路径 (因为Branch分叉会改变绝对路径)。
 
-## (2) 前端界面设计
+## 2 前端界面设计
 
 ### 2.1 设计参考
 
@@ -60,4 +66,12 @@ C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./Ima
 #### 2.1.2 CustomerRequiresDiagram 功能结构
 
 [![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./\ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
+
+## 3 必装开发环境
+
+### 3.1 MySQL服务端
+
+#### 3.1.1 MySQL服务端的安装
+
+详见[Ins_MySQL](./Ins_MySQL.md)安装说明。
 

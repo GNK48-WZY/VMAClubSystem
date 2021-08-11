@@ -1,6 +1,6 @@
 # Develop Document [-中文版](./README.md)
 
-[(1) Markdown README Document Normal Form](./README_eng.md#1-markdown-readme-document-normal-form)
+[1 Markdown README Document Normal Form](./README_eng.md#1-markdown-readme-document-normal-form)
 
 ----[1.1 Normal Form](./README_eng.md#11-normal-form)
 
@@ -8,7 +8,7 @@
 
 --------[1.2.1 How to Inset Images in Documents](./README_eng.md#121-how-to-inset-images-in-documents)
 
-[(2) GUI Design](./README_eng.md#2-gui-design)
+[2 GUI Design](./README_eng.md#2-gui-design)
 
 ----[2.1 Design Reference](./README_eng.md#21-design-reference)
 
@@ -16,7 +16,13 @@
 
 --------[2.1.2 CustomerRequiresDiagram Functional Structure](./README_eng.md#212-customerrequiresdiagram-functional-structure)
 
-## (1) Markdown README Document Normal Form
+[3 Required Development Environment]()
+
+----[3.1 MySQL Server](./README.md#21-设计参考)
+
+--------[3.1.1 Install MySQL Server]()
+
+## 1 Markdown README Document Normal Form
 
 ### 1.1 Normal Form
 
@@ -49,7 +55,7 @@ B is the image host's URL, the choose of image host is free by the document's au
 
 C is the URL which is the click-jump link, here should all be the path of the backup folder in [ImageHostingBackup](./ImageHostingBackup) folder. Because git branch will change the abs path, here should use relative path.
 
-## (2) GUI Design
+## 2 GUI Design
 
 ### 2.1 Design Reference
 
@@ -60,4 +66,12 @@ C is the URL which is the click-jump link, here should all be the path of the ba
 #### 2.1.2 CustomerRequiresDiagram Functional Structure
 
 [![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./\ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
+
+## 3 Required Development Environment
+
+### 3.1 MySQL Server
+
+#### 3.1.1 Install MySQL Server
+
+View [Ins_MySQL](./Ins_MySQL.md) to learn more.
 
