@@ -1,20 +1,20 @@
 # Develop Document 开发文档 [-English version](./README_eng.md)
 
-[(1) Markdown文档编写范式](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#1-markdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99%E8%8C%83%E5%BC%8F)
+[(1) Markdown文档编写范式](./README.md#1-markdown说明文档编写范式)
 
-----[1.1 范式](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#11-%E8%8C%83%E5%BC%8F)
+----[1.1 范式](./README.md#11-范式)
 
-----[1.2 ImageHostingBackup 文件夹](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#12-imagehostingbackup-%E6%96%87%E4%BB%B6%E5%A4%B9)
+----[1.2 ImageHostingBackup 文件夹](./README.md#12-imagehostingbackup-文件夹)
 
---------[1.2.1 写文档时如何嵌入图片](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#121-%E5%86%99%E6%96%87%E6%A1%A3%E6%97%B6%E5%A6%82%E4%BD%95%E5%B5%8C%E5%85%A5%E5%9B%BE%E7%89%87)
+--------[1.2.1 写文档时如何嵌入图片](./README.md#121-写文档时如何嵌入图片)
 
-[(2) 前端界面设计](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#2-%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1)
+[(2) 前端界面设计](./README.md#2-前端界面设计)
 
-----[2.1 设计参考](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#21-%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83)
+----[2.1 设计参考](./README.md#21-设计参考)
 
---------[2.1.1 ClubSystemVisualReference 设计效果图](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#211-clubsystemvisualreference-%E8%AE%BE%E8%AE%A1%E6%95%88%E6%9E%9C%E5%9B%BE)
+--------[2.1.1 ClubSystemVisualReference 设计效果图](./README.md#211-clubsystemvisualreference-设计效果图)
 
---------[2.1.2 CustomerRequiresDiagram 功能结构](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#212-customerrequiresdiagram-%E5%8A%9F%E8%83%BD%E7%BB%93%E6%9E%84)
+--------[2.1.2 CustomerRequiresDiagram 功能结构](./README.md#212-customerrequiresdiagram-功能结构)
 
 ## (1) Markdown说明文档编写范式
 
