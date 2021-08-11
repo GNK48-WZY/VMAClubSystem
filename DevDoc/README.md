@@ -45,7 +45,7 @@
 [![A](B)](C)
 ```
 
-```
+```html
 <a href="C" target="_blank"><img src="B" alt="A"/></a>
 ```
 
