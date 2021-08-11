@@ -22,6 +22,8 @@
 
 --------[3.1.1 Install MySQL Server](./README_eng.md#311-install-mysql-server)
 
+--------[3.1.2 Node.js Connect MySQL](./README_eng.md#311-install-mysql-server)
+
 ## 1 Markdown README Document Normal Form
 
 ### 1.1 Normal Form
@@ -75,3 +77,6 @@ C is the URL which is the click-jump link, here should all be the path of the ba
 
 View [Ins_MySQL](./Ins_MySQL.md) to learn more.
 
+#### 3.1.2 Node.js Connect MySQL
+
+View [RUNOOB](https://www.runoob.com/nodejs/nodejs-mysql.html) instruction.

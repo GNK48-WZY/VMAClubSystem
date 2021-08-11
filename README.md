@@ -24,3 +24,4 @@
 
 ------------[3.1.1 MySQL服务端的安装](./DevDoc/README.md#311-mysql服务端的安装)
 
+------------[3.1.2 Node.js连接MySQL数据库](./DevDoc/README.md#311-mysql服务端的安装)

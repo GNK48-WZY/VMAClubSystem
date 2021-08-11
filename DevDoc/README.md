@@ -22,6 +22,8 @@
 
 --------[3.1.1 MySQL服务端的安装](./DevDoc#311-mysql服务端的安装)
 
+--------[3.1.2 Node.js连接MySQL数据库](./DevDoc#311-mysql服务端的安装)
+
 ## 1 Markdown说明文档编写范式
 
 ### 1.1 范式
@@ -75,3 +77,6 @@ C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./Ima
 
 详见[Ins_MySQL](./Ins_MySQL.md)安装说明。
 
+#### 3.1.2 Node.js连接MySQL数据库
+
+详见[RUNOOB](https://www.runoob.com/nodejs/nodejs-mysql.html)教程。
