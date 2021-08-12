@@ -10,11 +10,15 @@
 
 --------[1.2.2 Use WebStorm](./README_eng.md#122-use-webstorm)
 
+------
+
 ## 1 node Folder
 
 ### 1.1 About
 
 The Node folder is a project folder that opens in WebStorm and is used to debug programs within the Node.js framework, includes all server-side functions (presentation layer, business logic layer, data access layer).
+
+------
 
 ### 1.2 Run Codes
 
@@ -25,6 +29,8 @@ node-v14.17.5
 WebStorm-2021.2
 
 You can find the installation package at the official website or download it directly from [project repository releases](https://github.com/VMAxCoding/VMAClubSystem/releases/tag/IDES).
+
+------
 
 #### 1.2.2 Use WebStorm
 

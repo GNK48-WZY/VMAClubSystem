@@ -18,6 +18,8 @@
 
 [3 Development Environment](./README_eng.md#3-required-development-environment)
 
+------
+
 ## 1 Markdown README Document Normal Form
 
 ### 1.1 Normal Form
@@ -29,9 +31,13 @@
 5. Read: [1.2 ImageHostingBackup Folder](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#12-imagehostingbackup-%E6%96%87%E4%BB%B6%E5%A4%B9).
 6. If it is necessary to write an English documentation, you can translate the Chinese documentation after completion, save it as a file < original filename _eng.md> in the same place, and add a jump link at the header header.
 
+------
+
 ### 1.2 ImageHostingBackup Folder
 
 This folder serves as a unified archive and backup of the images involved in each MD document. It is highly recommended to use a third-party image host for the images embedded in the document.
+
+------
 
 #### 1.2.1 How to Inset Images in Documents
 
@@ -51,6 +57,8 @@ B is the image host's URL, the choose of image host is free by the document's au
 
 C is the URL which is the click-jump link, here should all be the path of the backup folder in [ImageHostingBackup](./ImageHostingBackup) folder. Because git branch will change the abs path, here should use relative path.
 
+------
+
 ## 2 GUI Design
 
 ### 2.1 Design Reference
@@ -59,8 +67,12 @@ C is the URL which is the click-jump link, here should all be the path of the ba
 
 <a href="./ImageHostingBackup/DevDoc.README/ClubSystem_LoginPage.png" target="_blank"><img src="https://i.postimg.cc/FdmJXDTq/Club-System-Login-Page.png" alt="Club-System-Login-Page"/></a><a href="./ImageHostingBackup/DevDoc.README/ClubSystem_Student_AddClub_MiddleView.png" target="_blank"><img src="https://i.postimg.cc/Y4BvQdB9/Club-System-Student-Add-Club-Middle-View.png" alt="Club-System-Student-Add-Club-Middle-View"/></a><a href="./ImageHostingBackup/DevDoc.README/ClubSystem_Student_Events.png" target="_blank"><img src="https://i.postimg.cc/CBNnhktK/Club-System-Student-Events.png" alt="Club-System-Student-Events"/></a><a href="./ImageHostingBackup/DevDoc.README/SlubSystem_Student_AddClub_Top.png" target="_blank"><img src="https://i.postimg.cc/VS9dgXzF/Slub-System-Student-Add-Club-Top.png" alt="Slub-System-Student-Add-Club-Top"/></a>
 
+------
+
 #### 2.1.2 CustomerRequiresDiagram Functional Structure
 
 [![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
+
+------
 
 ## 3 Development Environment

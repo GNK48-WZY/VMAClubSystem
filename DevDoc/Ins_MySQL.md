@@ -6,6 +6,8 @@
 
 [2 项目中同步数据库文件](./DevDoc/Ins_MySQL.md#2-项目中同步数据库文件)
 
+------
+
 ## 前言: 简述MySQL数据库在项目中的结构
 
 [![1.jpg](https://i.postimg.cc/HkzxwJcS/1.jpg)](./ImageHostingBackup/Ins_MySQL/1.jpg)
@@ -47,6 +49,8 @@
 
 当然如上实例多少进行了简化, 不过应该已经足以理解MySQL的接口与项目代码的连接方式了。不过如上代码能正常运行的前提是, 运行的环境中能访问到MySQL服务器, 这就是为什么各电脑上都要进行安装。
 
+------
+
 ## 1 安装MySQL服务器
 
 项目发布页处可以下载到msi安装包, 也可自行在官网下载, 统一版本号8.0.26.0。
@@ -68,6 +72,8 @@
 [![5.png](https://i.postimg.cc/Y9h5bxMC/5.png)](./ImageHostingBackup/Ins_MySQL/5.png)
 
 如果提示"mysql不是关键词"则说明安装失败了。
+
+------
 
 ## 2 项目中同步数据库文件
 

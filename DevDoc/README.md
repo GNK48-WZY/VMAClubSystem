@@ -18,6 +18,8 @@
 
 [3 开发环境](./DevDoc#3-必装开发环境)
 
+------
+
 ## 1 Markdown说明文档编写范式
 
 ### 1.1 范式
@@ -29,9 +31,13 @@
 5. 参阅《[1.2 ImageHostingBackup 文件夹](https://github.com/VMAxCoding/VMAClubSystem/tree/main/DevDoc#12-imagehostingbackup-%E6%96%87%E4%BB%B6%E5%A4%B9)》。
 6. 如有必要编写英文说明文档, 可在中文文档完成后翻译, 另存为<原文件名_eng.md>文件, 放在同一处, 并在文件头标题处增加跳转链接。
 
+------
+
 ### 1.2 ImageHostingBackup 文件夹
 
 此文件夹作为对各md文档涉及的图片的统一归档备份, 文档内嵌入的图片强烈推荐使用第三方图床。
+
+------
 
 #### 1.2.1 写文档时如何嵌入图片
 
@@ -51,6 +57,8 @@ B处是图床URL, 图床随作者随意使用任意图床不限, 可在GitHub上
 
 C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./ImageHostingBackup)文件夹下的备份的路径, 注意使用相对路径 (因为Branch分叉会改变绝对路径)。
 
+------
+
 ## 2 前端界面设计
 
 ### 2.1 设计参考
@@ -59,9 +67,13 @@ C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./Ima
 
 <a href="./ImageHostingBackup/DevDoc.README/ClubSystem_LoginPage.png" target="_blank"><img src="https://i.postimg.cc/FdmJXDTq/Club-System-Login-Page.png" alt="Club-System-Login-Page"/></a><a href="./ImageHostingBackup/DevDoc.README/ClubSystem_Student_AddClub_MiddleView.png" target="_blank"><img src="https://i.postimg.cc/Y4BvQdB9/Club-System-Student-Add-Club-Middle-View.png" alt="Club-System-Student-Add-Club-Middle-View"/></a><a href="./ImageHostingBackup/DevDoc.README/ClubSystem_Student_Events.png" target="_blank"><img src="https://i.postimg.cc/CBNnhktK/Club-System-Student-Events.png" alt="Club-System-Student-Events"/></a><a href="./ImageHostingBackup/DevDoc.README/SlubSystem_Student_AddClub_Top.png" target="_blank"><img src="https://i.postimg.cc/VS9dgXzF/Slub-System-Student-Add-Club-Top.png" alt="Slub-System-Student-Add-Club-Top"/></a>
 
+------
+
 #### 2.1.2 CustomerRequiresDiagram 功能结构
 
 [![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
+
+------
 
 ## 3 开发环境
 

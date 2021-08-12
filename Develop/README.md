@@ -10,11 +10,15 @@
 
 --------[1.2.2 使用WebStorm](./Develop#122-使用webstorm)
 
+------
+
 ## 1 node文件夹
 
 ### 1.1 简述
 
 node文件夹是在WebStorm内打开的工程文件夹, 用于调试Node.js框架下的程序。用于实现此项目的主体，包括所有服务器端的功能 (表现层, 业务逻辑层, 数据访问层)。
+
+------
 
 ### 1.2 在本地运行代码
 
@@ -25,6 +29,8 @@ node-v14.17.5
 WebStorm-2021.2
 
 可以自行在官网寻找安装包, 也可直接在[项目发布页](https://github.com/VMAxCoding/VMAClubSystem/releases/tag/IDES)下载到。
+
+------
 
 #### 1.2.2 使用WebStorm
 
