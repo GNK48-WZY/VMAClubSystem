@@ -32,5 +32,13 @@
 
 ------------[2.1.2 CustomerRequiresDiagram Functional Structure](./DevDoc/README_eng.md#212-customerrequiresdiagram-functional-structure)
 
-----[3 Required Development Environment](./DevDoc/README_eng.md#3-required-development-environment)
+----[3 Git Work Flow](./DevDoc/README_eng.md#3-git-work-flow)
+
+--------[3.1 Branchs](./DevDoc/README_eng.md#31-branchs)
+
+------------[3.1.1 Branch -main](./DevDoc/README_eng.md#311-branch--main)
+
+------------[3.1.2 Branch -dev](./DevDoc/README_eng.md#312-branch--dev)
+
+------------[3.1.3 Branch -(features)](./DevDoc/README_eng.md#313-branch--features)
 

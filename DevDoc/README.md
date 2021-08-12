@@ -16,7 +16,7 @@
 
 --------[2.1.2 CustomerRequiresDiagram 功能结构](./README.md#212-customerrequiresdiagram-功能结构)
 
-[3 Git 工作流](./DevDoc#3-Git-工作流)
+[3 Git 工作流](./DevDoc#3-git-工作流)
 
 ----[3.1 Branchs](./README.md#31-branchs)
 
@@ -24,7 +24,7 @@
 
 --------[3.1.2 Branch -dev](./README.md#312-branch--dev)
 
---------[3.1.3 Branch -(features)](./README.md#211-clubsystemvisualreference-设计效果图)
+--------[3.1.3 Branch -(features)](./README.md#313-branch--features)
 
 ------
 

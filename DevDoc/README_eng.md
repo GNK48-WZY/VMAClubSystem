@@ -16,7 +16,15 @@
 
 --------[2.1.2 CustomerRequiresDiagram Functional Structure](./README_eng.md#212-customerrequiresdiagram-functional-structure)
 
-[3 Development Environment](./README_eng.md#3-required-development-environment)
+[3 Git Work Flow](./README_eng.md#3-git-work-flow)
+
+----[3.1 Branchs](./README_eng.md#31-branchs)
+
+--------[3.1.1 Branch -main](./README_eng.md#311-branch--main)
+
+--------[3.1.2 Branch -dev](./README_eng.md#312-branch--dev)
+
+--------[3.1.3 Branch -(features)](./README_eng.md#313-branch--features)
 
 ------
 
@@ -75,4 +83,26 @@ C is the URL which is the click-jump link, here should all be the path of the ba
 
 ------
 
-## 3 Development Environment
+## 3 Git Work Flow
+
+### 3.1 Branchs
+
+<a href='./ImageHostingBackup/DevDoc.README/3.1.png' target='_blank'><img width="100%" src='https://i.postimg.cc/VvrZhmQH/3-1.png' border='0' alt='3-1'/></a>
+
+------
+
+#### 3.1.1 Branch -main
+
+main是项目的主分支, 用于将已调试稳定的项目定期快照保存。进入开发阶段后main的每一次更新都将分配一个版本号。
+
+------
+
+#### 3.1.2 Branch -dev
+
+dev是和main并行推进的长期分支。是将新开发的功能合并后用于测试稳定并排查错误的。dev每推进一段时间都应排查故障并将main同步。
+
+------
+
+#### 3.1.3 Branch -(features)
+
+此处指一类临时分支。每当项目开始着手增加新的功能, 都将从dev中独立出一个临时分支。直到这个功能开发完成或到一阶段再与dev同步。所开发的功能模块在于dev同步后装配。

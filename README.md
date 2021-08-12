@@ -32,5 +32,12 @@
 
 ------------[2.1.2 CustomerRequiresDiagram 功能结构](./DevDoc/README.md#212-customerrequiresdiagram-功能结构)
 
-----[3 开发环境](./DevDoc/README.md#3-必装开发环境)
+----[3 Git 工作流](./DevDoc/README.md#3-Git-工作流)
 
+--------[3.1 Branchs](./DevDoc/README.md#31-branchs)
+
+------------[3.1.1 Branch -main](./DevDoc/README.md#311-branch--main)
+
+------------[3.1.2 Branch -dev](./DevDoc/README.md#312-branch--dev)
+
+------------[3.1.3 Branch -(features)](./DevDoc/README.md#313-branch--features)
