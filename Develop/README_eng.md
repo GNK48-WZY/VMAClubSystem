@@ -1,14 +1,14 @@
 # Develop Folder [-中文版](./README.md)
 
-[1 node Folder](./Develop#1-node文件夹)
+[1 node Folder](./README_eng.md#1-node-folder)
 
-----[1.1 About](./Develop#11-简述)
+----[1.1 About](.README_eng.md#11-about)
 
-----[1.2 Run Codes](./Develop#12-在本地运行代码)
+----[1.2 Run Codes](.README_eng.md#12-run-codes)
 
---------[1.2.1 Development Environment Installation](./Develop#121-环境安装)
+--------[1.2.1 Development Environment Installation](./README_eng.md#121-development-environment-installation)
 
---------[1.2.2 Use WebStorm](./Develop#122-使用webstorm)
+--------[1.2.2 Use WebStorm](./README_eng.md#122-use-webstorm)
 
 ## 1 node Folder
 
