@@ -61,6 +61,6 @@ C is the URL which is the click-jump link, here should all be the path of the ba
 
 #### 2.1.2 CustomerRequiresDiagram Functional Structure
 
-[![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./\ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
+[![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
 
 ## 3 Development Environment

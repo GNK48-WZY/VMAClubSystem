@@ -8,7 +8,7 @@
 
 ## 前言: 简述MySQL数据库在项目中的结构
 
-[![1.jpg](https://i.postimg.cc/HkzxwJcS/1.jpg)](./\ImageHostingBackup/Ins_MySQL/1.jpg)
+[![1.jpg](https://i.postimg.cc/HkzxwJcS/1.jpg)](./ImageHostingBackup/Ins_MySQL/1.jpg)
 
 要在网站开发中使用MySQL数据库, 则需要每个开发环境下都安装并运行MySQL服务器。所以我在此简介一下数据库在项目中的结构。以及简单的安装方法。
 

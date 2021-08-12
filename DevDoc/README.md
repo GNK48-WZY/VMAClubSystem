@@ -61,7 +61,7 @@ C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./Ima
 
 #### 2.1.2 CustomerRequiresDiagram 功能结构
 
-[![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./\ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
+[![v1-0-0.jpg](https://i.postimg.cc/prPCKZZy/v1-0-0.jpg)](./ImageHostingBackup/DevDoc.README/v1.0.0.jpg)
 
 ## 3 开发环境
 
