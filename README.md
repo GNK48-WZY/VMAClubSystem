@@ -2,15 +2,15 @@
 
 [工程文件](./Develop/README.md)
 
-----[1 node文件夹](./Develop/Develop#1-node文件夹)
+----[1 node文件夹](./Develop/README.md#1-node文件夹)
 
---------[1.1 简述](./Develop/Develop#11-简述)
+--------[1.1 简述](./Develop/README.md#11-简述)
 
---------[1.2 在本地运行代码](./Develop/Develop#12-在本地运行代码)
+--------[1.2 在本地运行代码](./Develop/README.md#12-在本地运行代码)
 
-------------[1.2.1 环境安装](./Develop/Develop#121-环境安装)
+------------[1.2.1 环境安装](./Develop/README.md#121-环境安装)
 
-------------[1.2.2 使用WebStorm](./Develop/Develop#122-使用webstorm)
+------------[1.2.2 使用WebStorm](./Develop/README.md #122-使用webstorm)
 
 ------
 
