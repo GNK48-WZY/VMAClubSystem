@@ -10,7 +10,7 @@
 
 ------------[1.2.1 环境安装](./Develop/README.md#121-环境安装)
 
-------------[1.2.2 使用WebStorm](./Develop/README.md #122-使用webstorm)
+------------[1.2.2 使用WebStorm](./Develop/README.md#122-使用webstorm)
 
 ------
 
