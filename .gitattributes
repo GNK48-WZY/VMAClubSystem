@@ -1,1 +1,2 @@
 *.xml linguist-detectable=true
+*.iml linguist-detectable=true
