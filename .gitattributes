@@ -1,2 +1,2 @@
-*.xml linguist-detectable=true
-*.json linguist-detectable=json
+*.xml linguist-detectable=node
+*.json linguist-detectable=node.js
