@@ -1,6 +1,6 @@
 # Develop Document 开发文档 [-English version](./README_eng.md)
 
-[1 Markdown文档编写范式](./README.md#1-markdown说明文档编写范式)
+[1 Markdown 文档编写范式](./README.md#1-markdown说明文档编写范式)
 
 ----[1.1 范式](./README.md#11-范式)
 
@@ -28,7 +28,7 @@
 
 ------
 
-## 1 Markdown说明文档编写范式
+## 1 Markdown 说明文档编写范式
 
 ### 1.1 范式
 

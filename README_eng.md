@@ -24,7 +24,7 @@
 
 ------------[1.2.1 How to Inset Images in Documents](./DevDoc/README_eng.md#121-how-to-inset-images-in-documents)
 
-----[2 GUI Design](./DevDoc/README_eng.md#2-gui-design)
+----[2 Design](./DevDoc/README_eng.md#2-gui-design)
 
 --------[2.1 Design Reference](./DevDoc/README_eng.md#21-design-reference)
 

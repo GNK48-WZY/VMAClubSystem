@@ -16,7 +16,7 @@
 
 [开发文档](./DevDoc/README.md)
 
-----[1 Markdown文档编写范式](./DevDoc/README.md#1-markdown说明文档编写范式)
+----[1 Markdown 文档编写范式](./DevDoc/README.md#1-markdown说明文档编写范式)
 
 --------[1.1 范式](./DevDoc/README.md#11-范式)
 
@@ -24,7 +24,7 @@
 
 ------------[1.2.1 写文档时如何嵌入图片](./DevDoc/README.md#121-写文档时如何嵌入图片)
 
-----[2 前端界面设计](./DevDoc/README.md#2-前端界面设计)
+----[2 设计](./DevDoc/README.md#2-前端界面设计)
 
 --------[2.1 设计参考](./DevDoc/README.md#21-设计参考)
 
