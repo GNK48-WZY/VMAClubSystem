@@ -8,7 +8,7 @@
 
 --------[1.2.1 写文档时如何嵌入图片](./README.md#121-写文档时如何嵌入图片)
 
-[2 前端界面设计](./README.md#2-前端界面设计)
+[2 设计](./README.md#2-前端界面设计)
 
 ----[2.1 设计参考](./README.md#21-设计参考)
 
@@ -16,7 +16,15 @@
 
 --------[2.1.2 CustomerRequiresDiagram 功能结构](./README.md#212-customerrequiresdiagram-功能结构)
 
-[3 开发环境](./DevDoc#3-必装开发环境)
+[3 Git 工作流](./DevDoc#3-Git-工作流)
+
+----[3.1 Branchs](./README.md#31-branchs)
+
+--------[3.1.1 Branch -main](./README.md#311-branch--main)
+
+--------[3.1.2 Branch -dev](./README.md#312-branch--dev)
+
+--------[3.1.3 Branch -(features)](./README.md#211-clubsystemvisualreference-设计效果图)
 
 ------
 
@@ -59,7 +67,7 @@ C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./Ima
 
 ------
 
-## 2 前端界面设计
+## 2 设计
 
 ### 2.1 设计参考
 
@@ -75,5 +83,26 @@ C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./Ima
 
 ------
 
-## 3 开发环境
+## 3 Git 工作流
 
+### 3.1 Branchs
+
+[![3-1.png](https://i.postimg.cc/VvrZhmQH/3-1.png)](./ImageHostingBackup/DevDoc.README/3.1.png)
+
+------
+
+#### 3.1.1 Branch -main
+
+main是项目的主分支, 用于将已调试稳定的项目定期快照保存。进入开发阶段后main的每一次更新都将分配一个版本号。
+
+------
+
+#### 3.1.2 Branch -dev
+
+dev是和main并行推进的长期分支。是将新开发的功能合并后用于测试稳定并排查错误的。dev每推进一段时间都应排查故障并将main同步。
+
+------
+
+#### 3.1.3 Branch -(features)
+
+此处指一类临时分支。每当项目开始着手增加新的功能, 都将从dev中独立出一个临时分支。直到这个功能开发完成或到一阶段再与dev同步。所开发的功能模块在于dev同步后装配。

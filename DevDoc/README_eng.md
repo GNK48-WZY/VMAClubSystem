@@ -8,7 +8,7 @@
 
 --------[1.2.1 How to Inset Images in Documents](./README_eng.md#121-how-to-inset-images-in-documents)
 
-[2 GUI Design](./README_eng.md#2-gui-design)
+[2 Design](./README_eng.md#2-gui-design)
 
 ----[2.1 Design Reference](./README_eng.md#21-design-reference)
 
@@ -59,7 +59,7 @@ C is the URL which is the click-jump link, here should all be the path of the ba
 
 ------
 
-## 2 GUI Design
+## 2 Design
 
 ### 2.1 Design Reference
 
