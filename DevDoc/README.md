@@ -87,7 +87,7 @@ C处是点击图片跳转的URL, 此处一律填写在[ImageHostingBackup](./Ima
 
 ### 3.1 Branchs
 
-[![3-1.png](https://i.postimg.cc/VvrZhmQH/3-1.png)](./ImageHostingBackup/DevDoc.README/3.1.png)
+<a href='./ImageHostingBackup/DevDoc.README/3.1.png' target='_blank'><img width="100%" src='https://i.postimg.cc/VvrZhmQH/3-1.png' border='0' alt='3-1'/></a>
 
 ------
 
