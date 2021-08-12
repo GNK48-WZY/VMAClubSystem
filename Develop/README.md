@@ -21,6 +21,7 @@ node文件夹是在WebStorm内打开的工程文件夹, 用于调试Node.js框�
 #### 1.2.1 环境安装
 
 node-v14.17.5
+
 WebStorm-2021.2
 
 可以自行在官网寻找安装包, 也可直接在[项目发布页](https://github.com/VMAxCoding/VMAClubSystem/releases/tag/IDES)下载到。

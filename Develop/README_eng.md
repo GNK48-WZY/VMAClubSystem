@@ -21,6 +21,7 @@ The Node folder is a project folder that opens in WebStorm and is used to debug 
 #### 1.2.1 Development Environment Installation
 
 node-v14.17.5
+
 WebStorm-2021.2
 
 You can find the installation package at the official website or download it directly from [project repository releases](https://github.com/VMAxCoding/VMAClubSystem/releases/tag/IDES).
