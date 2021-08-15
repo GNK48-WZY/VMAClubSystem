@@ -2,8 +2,10 @@
     author: SynthesisDu (https://github.com/SynthesisDu)
     software: WebStorm 2021.2, Node.js v14.17.5
     datetime: 2021.8.13 08:21
-    filename: interface.js
+    filename: server_interface.js
     git_repo: https://github.com/VMAxCoding/VMAClubSystem
+
+    和MySQL服务器连接的接口, 基本的增删改查语句的接口
  */
 
 const mysql = require('mysql2/promise');
