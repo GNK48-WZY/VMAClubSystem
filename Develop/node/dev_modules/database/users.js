@@ -6,23 +6,8 @@
     git_repo: https://github.com/VMAxCoding/VMAClubSystem
  */
 
-/**
- * 根据字段值搜索匹配的行
- * @param searchFieldName 要搜索的字段名
- * @param searchFieldValue 要搜索的字段值
- * @returns {{password: string, name_eng: string, mail: string, lv: string, id: string, name_cn: string, info: string}[]} 由行数据对象组成的列表
- */
-exports.searchRowByField = function (searchFieldName, searchFieldValue) {
-    let row = {
-        id: '',
-        name_cn: '',
-        name_eng: '',
-        mail: '',
-        password: '',
-        lv: '',
-        info: ''
-    };
-    return new Array(row);
+const mysql = require('./interface');
+
+exports.searchRowByField = function (byFieldName, byFieldValue) {
+    return mysql.select('*', 'users', byFieldName, byFieldValue);
 }
-
-
