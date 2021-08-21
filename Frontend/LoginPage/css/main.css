@@ -33,58 +33,54 @@ body{
     font-weight: 100;
 }
 
-/* ===== 登陆窗部分 ===== */
-.login_sub_win{
+/* ===== 副窗部分 ===== */
+.sub_win{
     background: #222224;
     color: #FFFFFF;
-    width: 27em;
+    width: 23em;
     padding-left: 2.5em;
     padding-top: 1em;
     top: 5em;
     bottom: 5em;
     right: 3em;
+    position: fixed;
+    overflow: hidden;
+}
+
+/* 登录窗 */
+.sub_win .login_win{
+    transition: 0.8s;
+    width: 23em;
+    right: 0em;
+    position: absolute;
+}
+
+/* 注册窗 */
+.sub_win .register_win{
+    transition: 0.8s;
+    width: 23em;
+    right: -25em;
     position: absolute;
 }
  
-/* 登录窗 LOGIN标题 */
-.login_sub_win h1{
+/* 副窗 标题 */
+.sub_win h1{
     font-weight: 700;
 }
 
-/* 登录窗 OR CREATE ACCOUNT副标题 */
-.login_sub_win p{
-    font-weight: 400;
-}
-
-/* 登录窗 CREATE ACCOUNT选项链接 */
-.login_sub_win p a{
-    color: #22EEFF;
-    text-decoration: none;
-}
-
-/* 登录窗 输入框 */
-.login_sub_win .inputs input#username{
-    display: block;
-    transition: 0.3s;
-    width: 15em;
-    padding-top: 2em;
-    border-top: none;
-    border-bottom: 1px solid #F5F5F7;
-    border-left: none;
-    border-right: none;
+/* 副窗 副标题 */
+.sub_win p{
     font-weight: 400;
     font-size: 1em;
-    color: #F5F5F7;
-    background-color: transparent;
+    display: inline;
 }
 
-.login_sub_win .inputs input#password{
+/* 副窗 输入框 */
+.sub_win .inputs input{
     display: block;
     position: absolute;
-    top: 13em;
     transition: 0.3s;
     width: 15em;
-    padding-top: 2em;
     border-top: none;
     border-bottom: 1px solid #F5F5F7;
     border-left: none;
@@ -95,39 +91,61 @@ body{
     background-color: transparent;
 }
 
-/* 登录窗 输入框悬停样式 */
-.login_sub_win .inputs input#username:hover{
-    transition: 0.3s;
-    width: 25em;
+.sub_win .inputs input#username{
+    top: 10em;
 }
 
-.login_sub_win .inputs input#password:hover{
-    transition: 0.3s;
-    width: 25em;
+.sub_win .inputs input#password{
+    top: 14em;
 }
 
-/* 登录窗 输入框选中样式 */
-.login_sub_win .inputs input#username:focus{
+.sub_win .inputs input#confirm_pswd{
+    top: 18em;
+}
+
+/* 副窗 输入框悬停样式 */
+.sub_win .inputs input#username:hover{
+    transition: 0.3s;
+    width: 18em;
+}
+
+.sub_win .inputs input#password:hover{
+    transition: 0.3s;
+    width: 18em;
+}
+
+.sub_win .inputs input#confirm_pswd:hover{
+    transition: 0.3s;
+    width: 18em;
+}
+
+/* 副窗 输入框选中样式 */
+.sub_win .inputs input#username:focus{
     outline: none; 
-    width: 25em;
+    width: 20em;
     border-bottom: 2px solid #FFFFFF;
 }
 
-.login_sub_win .inputs input#password:focus{
+.sub_win .inputs input#password:focus{
     outline: none;
-    width: 25em;
+    width: 20em;
     border-bottom: 2px solid #FFFFFF;
 }
 
-/* 登录窗 按钮 */
-.login_sub_win .btns{
-    display: flex;
-    bottom: 1.5em;
+.sub_win .inputs input#confirm_pswd:focus{
+    outline: none;
+    width: 20em;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+/* 副窗 底端按钮 */
+.sub_win .btns{
+    bottom: -26em;
     position: absolute;
 }
 
-/* 登录窗 SignIn按钮 */
-.login_sub_win .btns input#sign_in{
+/* 副窗 主按钮 */
+.sub_win button#sign_in, button#register{
     color: #1D1D1F;
     background-color: #22EEFF;
     transition: 0.3s;
@@ -139,26 +157,44 @@ body{
     font-weight: 700;
 }
 
-.login_sub_win .btns input#sign_in:hover{
+.sub_win button#sign_in:hover, button#register:hover{
     background-color: #22AABB;
     transition: 0.3s;
 }
 
-.login_sub_win .btns input#sign_in:active{
+.sub_win button#sign_in:active, button#register:active{
     background-color: #228899;
     transition: 0.3s;
 }
 
-/* 登录窗 ForgotPassword按钮 */
-.login_sub_win .btns input#forgot_password{
-    color: #FFFFFF;
+/* 副窗 底部副按钮 */
+.sub_win input#forgot_password, input#back{
+    color: #F5F5F7;
     transition: 0.3s;
     background: transparent;
     border: none;
-    padding-left: 1em;
 }
 
-.login_sub_win .btns input#forgot_password:hover{
+.sub_win input#forgot_password:hover, input#back:hover{
     color: #CCCCCC;
     transition: 0.3s;
+}
+
+/* 登录窗 Create Account选项按钮 */
+.sub_win button#create_account{
+    color: #22EEFF;
+    background: none;
+    border: none;
+    font-size: 1em;
+    padding-left: 0.2em;
+}
+
+.sub_win button#create_account:hover{
+    color: #22AABB;
+}
+
+/* 登录窗 底部按钮 */
+.sub_win .btns{
+    width: 20em;
+    display: flex;
 }
