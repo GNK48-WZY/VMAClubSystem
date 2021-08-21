@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700;800&display=swap');
+
+/* ===== 主体 ===== */
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: #1D1D1F;
+    display: flex
+}
+
+/* ===== Slogan部分 ===== */
+.slogans{
+    color: #FFFFFF;
+    bottom: 2em;
+    left: 2em;
+    right: 32em;
+    position: absolute;
+}
+
+/* Slogan 主slogan */
+.slogans h1{
+    font-weight: 800;
+    font-size: 8em;
+}
+
+/* Slogan 主slogan前两词 */
+.slogans h1 span{
+    color: #22EEFF;
+}
+
+/* Slogan 副slogan */
+.slogans p{
+    font-weight: 100;
+}
+
+/* ===== 登陆窗部分 ===== */
+.login_sub_win{
+    background: #222224;
+    color: #FFFFFF;
+    width: 27em;
+    padding-left: 2.5em;
+    padding-top: 1em;
+    top: 5em;
+    bottom: 5em;
+    right: 3em;
+    position: absolute;
+}
+ 
+/* 登录窗 LOGIN标题 */
+.login_sub_win h1{
+    font-weight: 700;
+}
+
+/* 登录窗 OR CREATE ACCOUNT副标题 */
+.login_sub_win p{
+    font-weight: 400;
+}
+
+/* 登录窗 CREATE ACCOUNT选项链接 */
+.login_sub_win p a{
+    color: #22EEFF;
+    text-decoration: none;
+}
+
+/* 登录窗 输入框 */
+.login_sub_win .inputs input#username{
+    display: block;
+    transition: 0.3s;
+    width: 15em;
+    padding-top: 2em;
+    border-top: none;
+    border-bottom: 1px solid #F5F5F7;
+    border-left: none;
+    border-right: none;
+    font-weight: 400;
+    font-size: 1em;
+    color: #F5F5F7;
+    background-color: transparent;
+}
+
+.login_sub_win .inputs input#password{
+    display: block;
+    position: absolute;
+    top: 13em;
+    transition: 0.3s;
+    width: 15em;
+    padding-top: 2em;
+    border-top: none;
+    border-bottom: 1px solid #F5F5F7;
+    border-left: none;
+    border-right: none;
+    font-weight: 400;
+    font-size: 1em;
+    color: #F5F5F7;
+    background-color: transparent;
+}
+
+/* 登录窗 输入框悬停样式 */
+.login_sub_win .inputs input#username:hover{
+    transition: 0.3s;
+    width: 25em;
+}
+
+.login_sub_win .inputs input#password:hover{
+    transition: 0.3s;
+    width: 25em;
+}
+
+/* 登录窗 输入框选中样式 */
+.login_sub_win .inputs input#username:focus{
+    outline: none; 
+    width: 25em;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.login_sub_win .inputs input#password:focus{
+    outline: none;
+    width: 25em;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+/* 登录窗 按钮 */
+.login_sub_win .btns{
+    display: flex;
+    bottom: 1.5em;
+    position: absolute;
+}
+
+/* 登录窗 SignIn按钮 */
+.login_sub_win .btns input#sign_in{
+    color: #1D1D1F;
+    background-color: #22EEFF;
+    transition: 0.3s;
+    width: 6em;
+    height: 2em;
+    border: none;
+    border-radius: 1em;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.login_sub_win .btns input#sign_in:hover{
+    background-color: #22AABB;
+    transition: 0.3s;
+}
+
+.login_sub_win .btns input#sign_in:active{
+    background-color: #228899;
+    transition: 0.3s;
+}
+
+/* 登录窗 ForgotPassword按钮 */
+.login_sub_win .btns input#forgot_password{
+    color: #FFFFFF;
+    transition: 0.3s;
+    background: transparent;
+    border: none;
+    padding-left: 1em;
+}
+
+.login_sub_win .btns input#forgot_password:hover{
+    color: #CCCCCC;
+    transition: 0.3s;
+}
