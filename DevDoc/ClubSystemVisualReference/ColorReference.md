@@ -9,7 +9,7 @@
 * **High Saturation Colors**  
     * #22EEFF  
     Bright Cyan
-    * #22DDEE
+    * #22DDEE  
     Cyan (Selected cyan)
     * #FFAA11  
     Energetic Orange  
