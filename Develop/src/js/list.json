@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "pname": "小米净水器600G 白色",
+        "price": 1699,
+        "img": "./images/12.jpg"
+    },
+    {
+        "id": 2,
+        "pname": "Redmi G i5/16GB/512GB PCIe/GTX 1650",
+        "price": 4999,
+        "img": "./images/13.jpg"
+    },
+
+    {
+        "id": 3,
+        "pname": "变频 | 米家互联网空调 1.5匹",
+        "price": 1899,
+        "img": "./images/14.jpg"
+    },
+    {
+        "id": 4,
+        "pname": "积木 沙漠赛车 白色",
+        "price": 79,
+        "img": "./images/15.jpg"
+    },
+	{
+	    "id": 5,
+	    "pname": "日常元素抽纸 青春版 24包/箱",
+	    "price": 27.9,
+	    "img": "./images/16.jpg"
+	},
+	{
+	    "id": 6,
+	    "pname": "米家互联网洗烘一体机10Kg 白色",
+	    "price": 1999,
+	    "img": "./images/17.jpg"
+	},
+	
+	{
+	    "id": 7,
+	    "pname": "小米头戴式蓝牙耳机 黑色",
+	    "price": 199,
+	    "img": "./images/18.jpg"
+	},
+	{
+	    "id": 8,
+	    "pname": "RedmiBook 13 锐龙版 R5 16G 512G  SSD 集显 月光银",
+	    "price": 3599,
+	    "img": "./images/19.jpg"
+	},
+	{
+	    "id": 9,
+	    "pname": "小米移动电源3 20000mAh 超级闪充版 黑色",
+	    "price": 249,
+	    "img": "./images/20.jpg"
+	},
+	{
+	    "id": 10,
+	    "pname": "米家两门冰箱 160L 银色",
+	    "price": 899,
+	    "img": "./images/21.jpg"
+	},
+	{
+	    "id": 11,
+	    "pname": "Pro 15增强版 i5",
+	    "price": 4999,
+	    "img": "./images/22.jpg"
+	},
+	{
+	    "id": 12,
+	    "pname": "米家声波电动牙刷T500",
+	    "price": 179,
+	    "img": "./images/23.jpg"
+	},
+	{
+	    "id": 13,
+	    "pname": " 14 Ⅱ R5 8G 512G 银色",
+	    "price": 3599,
+	    "img": "./images/24.jpg"
+	},
+	{
+	    "id": 14,
+	    "pname": "自清洁 | 米家互联网空调 1.5匹",
+	    "price": 1899,
+	    "img": "./images/25.jpg"
+	},
+	{
+	    "id": 15,
+	    "pname": "RedmiBook Air 13 I5/16G/512G/2.5K100%sRGB 灰色",
+	    "price": 4999,
+	    "img": "./images/26.jpg"
+	},
+	{
+	    "id": 16,
+	    "pname": "最生活浴巾·Air（4条装） 白色+素蓝",
+	    "price": 169,
+	    "img": "./images/27.jpg"
+	}
+]
+
+
+[{
+        "id": 1,
+        "pname": "鞋子",
+        "price": 398,
+        "img": "./images/1.jpg"
+    },
+    {
+        "id": 2,
+        "pname": "袜子",
+        "price": 28,
+        "img": "./images/2.jpg"
+    }
+
+]
