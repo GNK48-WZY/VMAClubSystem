@@ -1,3 +1,5 @@
+'use strict';
+
 const jwt = require("jwt-simple");
 const express = require("express");
 

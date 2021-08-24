@@ -1,3 +1,5 @@
+'use strict';
+
 const mysql = require('mysql');
 
 const pool = mysql.createPool(require("../config").dev);

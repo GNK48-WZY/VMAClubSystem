@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require("fs");// file system
 class goodsController {
     getGoodsById(request, response, next) {
@@ -10,4 +12,5 @@ class goodsController {
         response.json(result);
     }
 }
+
 module.exports = new goodsController();
