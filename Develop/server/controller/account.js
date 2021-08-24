@@ -1,3 +1,5 @@
+'use strict';
+
 const db = require("../core/mysql");
 const moment = require("moment");
 const md5 = require("md5");
@@ -40,6 +42,7 @@ class AccountController {
             })
         }
     }
+
     async login(request, resposne, next) {
 
         let loginSql = "SELECT `u_id`,`u_name`,`u_sex`,`u_create` FROM users WHERE u_name=? AND u_pwd=? AND u_status=1 ;";

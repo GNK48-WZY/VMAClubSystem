@@ -1,3 +1,5 @@
+'use strict';
+
 const db = require("../core/mysql");
 const moment = require("moment");
 
@@ -77,7 +79,6 @@ class CartsController {
                 }
 
 
-
             }
 
         } catch (error) {
@@ -117,9 +118,8 @@ class CartsController {
         }
 
 
-
-
     }
+
     // 修改数量
     async modifyCart(request, resposne, next) {
 
@@ -154,9 +154,10 @@ class CartsController {
         }
 
     }
+
     // 删除购物车
     async deleteCart(request, resposne, next) {
-      
+
         let parmas = [
             request.body.cid,
         ]
@@ -187,6 +188,7 @@ class CartsController {
         }
 
     }
+
     // 结算 把状态1 改成2
     async giveMoney(request, resposne, next) {
         resposne.send("addCart")
