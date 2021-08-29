@@ -22,15 +22,16 @@ server.use(express.json());
 // //     next()
 // // })
 //
-// server.use("/account", require("./routers/account"));
 // server.use("/cart", require("./routers/carts"));
 // server.use("/goods", require("./routers/goods"));
+// server.use("/account", require("./routers/account"));
 
+// http://127.0.0.1:8080/test
 server.use('/test', async (request, response, next) => {
     response.json('Hello world!');
-    // response.html('etc');
 })
 
+// http://127.0.0.1:8080
 server.listen(8080, () => {
     console.log("启动服务器完毕!");
 })
