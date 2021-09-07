@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/axios.js"></script>
+    <script src="./js/libs/layer/layer.js"></script>
+    <style>
+        .num {
+            width: 30px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.1.4/bootstrap-table.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.1.4/bootstrap-table.min.js"></script>
+</head>
+
+<body>
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>图片</th>
+                <th>名称</th>
+                <th>数量</th>
+                <th>单价</th>
+                <th>总金额</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="tab">
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+<script>
+    axios.defaults.baseURL = "http://127.0.0.1:8080";
+    //请求拦截
+    axios.interceptors.request.use((config) => {
+        config.headers.token = localStorage.getItem("token");
+        return config;
+    });
+
+
+    axios({
+        url: "/cart/getCart"
+    }).then(function (res) {
+        console.log(res)
+        render(res.data.data);
+    })
+
+
+    function render(data) {
+        console.log(data)
+        let str = ``
+        data.forEach(el => {
+            str += `
+            <tr>
+                <td scope="row">${el.c_id}</td>
+                <td><img style="width:30px;height:30px" src='http://127.0.0.1:8080/${el.p_img}'></td>
+                <td>${el.p_name}</td>
+                <td> <button class='sub'>-</button>
+                    <input class='num' value=${el.p_number}>
+                    <button class='in'>+</button></td>
+                <td>${el.p_price}</td>
+                <td>${el.p_total}</td>
+                <td> <a class='del'  c_id=${el.c_id}>删除</a> </td>
+          </tr>
+            `
+        });
+        $("#tab").html(str);
+    }
+
+    $(function () {
+
+        $("#tab").on("click", '.sub', function () {
+
+            if ($(this).next('.num').val() == 1) {
+                return;
+            }
+            $(this).next('.num').val($(this).next('.num').val() - 1)
+            totalROW(this)
+        })
+
+        $("#tab").on("click", '.in', function () {
+            $(this).prev('.num').val(Number($(this).prev('.num').val()) + 1);
+            totalROW(this)
+
+        })
+
+        //删除
+        $("#tab").on("click", '.del', function () {
+
+            let cId = $(this).attr("c_id");
+            let data = new URLSearchParams();
+            data.append("cid", cId);
+
+            layer.confirm("你确定要删除吗?", {
+                btn: ["yes", '容朕再想想']
+            }, (index)=>{
+
+                
+
+                axios({
+                    url: "/cart/deleteCart",
+                    method: "post",
+                    data
+                }).then( (res)=>{
+                    console.log(res)
+                    layer.msg(res.data.msg);
+                    layer.close(index);
+
+                    $(this).parents("tr").remove();
+                })
+
+            }, function () {
+
+            })
+
+
+
+
+
+        })
+
+        function totalROW(obj) {
+            let num = $(obj).parents("tr").children("td").eq(3).children(".num").val();
+            let price = $(obj).parents("tr").children("td").eq(4).text();
+            $(obj).parents("tr").children("td").eq(5).text(num * price);
+
+            let data = new URLSearchParams();
+            data.append("cid", $(obj).parents("tr").children("td").eq(0).text());
+            data.append("pnumber", num);
+            axios({
+                url: "/cart/modifyCart",
+                method: "post",
+                data
+            }).then(function (res) {
+                console.log(res)
+                layer.msg(res.data.msg);
+            })
+
+        }
+    })
+
+
+
+</script>
