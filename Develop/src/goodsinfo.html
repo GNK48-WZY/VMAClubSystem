@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/axios.js"></script>
+    <script src="./js/libs/layer/layer.js"></script>
+</head>
+
+<body>
+    <div class="box">
+
+        <div id="left">
+            <img src="" alt="">
+        </div>
+        <div id="right">
+            <p>
+                名称 :<span></span>
+            </p>
+            <p>
+                价格 :<span></span>
+            </p>
+
+            <p>
+                <button id="sub">-</button>
+                <input id="num" style="width: 30px;" type="number" value="1"> <button id="increment">+</button> <button
+                    id="addCart">加入购物车</button>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    axios.defaults.baseURL = "http://127.0.0.1:8080";
+    //请求拦截
+    axios.interceptors.request.use(function (config) {
+        config.headers.token=localStorage.getItem("token");
+        return config;
+    })
+    let id = 2;
+    axios({
+        url: "goods/goodsById?id=" + id
+    }).then(function (res) {
+        console.log(res)
+
+        $("#left img").attr("src", "http://127.0.0.1:8080/" + res.data.img);
+        $("#right span:eq(0)").text(res.data.pname)
+        $("#right span:eq(1)").text(res.data.price);
+
+        //往加入购物的按钮上藏了一个对象 (就是当前产品相关信息)
+        $("#addCart").data("info", res.data)
+    })
+
+
+    $(function () {
+        $("#right p #sub").on("click", function () {
+            if ($(this).next().val() == 1) {
+                return;
+            }
+            $(this).next().val($(this).next().val() - 1);
+        })
+        $("#right p #increment").on("click", function () {
+
+            $(this).prev().val(Number($(this).prev().val()) + 1);
+        })
+
+
+        $("#right #addCart").on("click", function () {
+
+            // request.Info.u_id,
+            //     request.body.pid,
+            //     request.body.pname,
+            //     request.body.pimg,
+            //     request.body.pnumber,
+            //     request.body.pprice,
+
+            //购买人的id
+            let uId = JSON.parse(localStorage.getItem("user") || '{}').u_id;
+            //取当年存的值
+            let pId = $("#addCart").data("info").id;
+            console.log(pId)
+            let pName = $("#addCart").data("info").pname;
+            let img = $("#addCart").data("info").img;
+            let pPrice = $("#addCart").data("info").price;
+            let pNumber = $("#num").val();
+
+
+
+
+            let data = new URLSearchParams();
+            // data.append('u_id', uId);
+            data.append('pid', pId);
+            data.append('pname', pName);
+            data.append('pimg', img);
+            data.append('pnumber', pNumber);
+            data.append('pprice', pPrice);
+
+            axios({
+                url: "/cart/addCart",
+                method: "post",
+                data: data
+            }).then(function (res) {
+                layer.msg(res.data.msg);
+            })
+
+
+        })
+
+    })
+
+</script>

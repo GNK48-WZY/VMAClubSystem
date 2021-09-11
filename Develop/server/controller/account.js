@@ -1,6 +1,6 @@
 'use strict';
 
-const db = require("../core/mysql");
+const db = require("../mysql/mysql");
 const moment = require("moment");
 const md5 = require("md5");
 // json web token
