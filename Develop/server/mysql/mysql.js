@@ -1,8 +1,55 @@
+// https://www.npmjs.com/package/mysql
+
+// cmd debug {
+// >>> mysql -u root -p
+// >>> alter user 'root'@'localhost' identified with mysql_native_password by '6lXVNlfK_ZX&';
+// >>> flush privileges;
+// >>> quit;
+// >>> }
+
 'use strict';
 
 const mysql = require('mysql');
 
-const pool = mysql.createPool(require("../config").dev);
+// 连接数据库
+const pool = mysql.createPool({
+    host: "127.0.0.1",
+    user: "root",
+    password: "6lXVNlfK_ZX&",
+    port: 3306,
+    database:'vmaclubsystem'
+});
+
+// const query = (sql, params, cb) => {
+//     // 获取连接
+//     pool.getConnection((err, conn) => {
+//         if (err) {
+//             console.log("****************************");
+//             console.log("连接MySQL失败");
+//             pool.releaseConnection();
+//         }
+//         conn.query(sql, params, (err, result, fields) => {
+//             if (err) {
+//                 // 释放连接对象
+//                 conn.release();
+//                 console.log("****************************");
+//                 console.log("执行SQL失败");
+//                 return;
+//             }
+//             cb(result, fields);
+//             // 释放连接对象
+//             conn.release();
+//         })
+//     });
+// };
+//
+// let sql = "select * from users;";
+// let params = [];
+// query(sql, params, function (result, fields) {
+//     console.log(result);
+// });
+
+
 pool.on('connection', (connection) => {
     //logger.info("connection!");
 });
@@ -30,7 +77,7 @@ module.exports.getConnection = (cb) => {
         });
     }
 };
-module.exports.exec = (sql, values, cb) => {
+module.exports.query = (sql, values, cb) => {
     if (typeof cb == "function") {
         pool.getConnection((err, connection) => {
             if (err) {
@@ -142,7 +189,7 @@ this.getConnection((err, connection) => {
  * @param values
  * @returns {Promise}
  */
-module.exports.exec2 = (connection, sql, values, cb) => {
+module.exports.query2 = (connection, sql, values, cb) => {
     if (typeof cb == "function") {
         connection.query(sql, values, (error, rows) => {
             cb(error, rows);

@@ -3,33 +3,64 @@
 const express = require("express");
 const cors = require("cors");
 
-// // const bodyParser=require("body-parser");
+const bodyParser = require("body-parser");
 
 const server = express();
 
+const database = require('./mysql/mysql.js');
+
+server.get("/getUsers", async (request, response, next) => {
+    let name_cn = request.query.name_cn;
+    let parmas = [name_cn];
+    let sql = "SELECT * FROM users WHERE name_cn = ? ;";
+    let result = await database.query(sql, parmas);
+    // 返回到前端
+    response.json(result);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //引入中间件
-// server.use(bodyParser.urlencoded({extended:false}));
-// server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({extended:false}));
+server.use(bodyParser.json());
 
 server.use(cors());
 server.use(express.urlencoded({extended: false}));
 server.use(express.json());
 
 // //静态资源服务器
-// server.use(express.static("./public"));
-// // server.use(function (req, res, next) {
-// //     if (!req.user) return next(createError(401, 'Please login to view this page.'))
-// //     next()
-// // })
-//
-// server.use("/cart", require("./routers/carts"));
-// server.use("/goods", require("./routers/goods"));
-// server.use("/account", require("./routers/account"));
+server.use(express.static("./public"));
+server.use(function (req, res, next) {
+    if (!req.user) return next(createError(401, 'Please login to view this page.'))
+    next()
+})
+
+server.use("/cart", require("./routers/carts"));
+server.use("/goods", require("./routers/goods"));
+server.use("/account", require("./routers/account"));
 
 // http://127.0.0.1:8080/test
 server.use('/test', async (request, response, next) => {
-    console.log("访问[http://127.0.0.1:8080/test]");
+    console.log(">>>http://127.0.0.1:8080/test");
+    console.log("");
     response.json('Hello world!');
+})
+
+server.use('', async (request, response, next) => {
+    console.log(">>>http://127.0.0.1:8080");
+    console.log("");
+    response.json('http://127.0.0.1:8080');
 })
 
 // http://127.0.0.1:8080

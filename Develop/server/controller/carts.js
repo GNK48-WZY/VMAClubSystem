@@ -1,6 +1,6 @@
 'use strict';
 
-const db = require("../core/mysql");
+const db = require("../mysql/mysql");
 const moment = require("moment");
 
 class CartsController {
