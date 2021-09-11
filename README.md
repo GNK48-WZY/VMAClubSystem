@@ -1,43 +1,31 @@
-# VMAClubSystem [-English version](./README_eng.md)
+# VMAClubSystem (开发阶段)
 
-[工程文件](./Develop/README.md)
+# 1 快速开始
 
-----[1 node文件夹](./Develop/README.md#1-node文件夹)
+## 1.1 准备工作
 
---------[1.1 简述](./Develop/README.md#11-简述)
+1. 安装node.js, 并确在系统环境变量中
 
---------[1.2 在本地运行代码](./Develop/README.md#12-在本地运行代码)
+2. 一个编译器, 或者如果你是勇士, 也可以挑战txt写代码
 
-------------[1.2.1 环境安装](./Develop/README.md#121-环境安装)
+3. 运行【./Develop/server/@InitializeServer.bat】以初始化运行环境,  或在【./Develop/server】路径下者手动在【Git Bash】或【CMD】下输入这几行命令
 
-------------[1.2.2 使用WebStorm](./Develop/README.md#122-使用webstorm)
+   ```dos
+   // 必须已经安装好node
+   // 以下几行请顺序执行
+   
+   npm i -g nodemon
+   npm init -y
+   npm i -g cnpm -registry=https://registry.npm.taobao.org
+   cnpm i express mysql --save dev
+   ```
 
-------
+4. 运行【./Develop/server/@RunServer.bat】以运行服务器, 或在【./Develop/server】路径下手动在【Git Bash】或【CMD】下输入条命令
 
-[开发文档](./DevDoc/README.md)
+   ```dos
+   nodemon app.js
+   ```
 
-----[1 Markdown 文档编写范式](./DevDoc/README.md#1-markdown说明文档编写范式)
+## 1.2 访问
 
---------[1.1 范式](./DevDoc/README.md#11-范式)
-
---------[1.2 ImageHostingBackup 文件夹](./DevDoc/README.md#12-imagehostingbackup-文件夹)
-
-------------[1.2.1 写文档时如何嵌入图片](./DevDoc/README.md#121-写文档时如何嵌入图片)
-
-----[2 设计](./DevDoc/README.md#2-前端界面设计)
-
---------[2.1 设计参考](./DevDoc/README.md#21-设计参考)
-
-------------[2.1.1 ClubSystemVisualReference 设计效果图](./DevDoc/README.md#211-clubsystemvisualreference-设计效果图)
-
-------------[2.1.2 CustomerRequiresDiagram 功能结构](./DevDoc/README.md#212-customerrequiresdiagram-功能结构)
-
-----[3 Git 工作流](./DevDoc/README.md#3-Git-工作流)
-
---------[3.1 Branchs](./DevDoc/README.md#31-branchs)
-
-------------[3.1.1 Branch -main](./DevDoc/README.md#311-branch--main)
-
-------------[3.1.2 Branch -dev](./DevDoc/README.md#312-branch--dev)
-
-------------[3.1.3 Branch -(features)](./DevDoc/README.md#313-branch--features)
+完成1.1.4后，将可以在http://127.0.0.1:8080访问此项目
