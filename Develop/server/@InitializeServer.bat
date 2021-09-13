@@ -8,5 +8,8 @@ call npm i -g nodemon
 call npm init -y
 call npm i -g cnpm -registry=https://registry.npm.taobao.org
 call cnpm i express mysql --save dev
+call cnpm install body-parser --save
+call cnpm install cookie-parser --save
+call cnpm install multer --save
 ) else echo Go [http://nodejs.cn/download/current/] to download and install node.js first you silly b!
 pause
