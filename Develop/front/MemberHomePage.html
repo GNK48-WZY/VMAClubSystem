@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/MemberHomePage.css">
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+    <div class="detail_page">
+        <div class="all_club_list">
+            <section v-on:click="showInfo" id="club" >
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name" ><a href="www.badi,com">Technology Innovation Club</a></p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+
+            <section id="club">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name">Technology Innovation Club</p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+
+            <section id="club">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name">Technology Innovation Club</p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+
+            <section id="club">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name">Technology Innovation Club</p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+
+            <section id="club">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name">Technology Innovation Club</p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+
+            <section id="club">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name">Technology Innovation Club</p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+
+            <section id="club">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name">Technology Innovation Club</p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+
+            <section id="club">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name">Technology Innovation Club</p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#club',
+            methods:{
+                showInfo(){
+                    alert("wuhu")
+                }
+            }
+        })
+        var current_page = 0
+        var page_count = 3
+        var tag_count = 4
+
+        function select_tab(page_num, selected_color){
+            for (var i = 0; i <page_count; i++){
+            document.getElementById("club_" + i).style.borderColor = "#555557"
+                document.getElementById("club_" + i).style.background = "none"
+                document.getElementById("club_" + i).style.opacity = 0.6
+            }
+            document.getElementById("club_" + page_num).style.borderColor = selected_color
+            document.getElementById("club_" + page_num).style.background = "#222224"
+            document.getElementById("club_" + page_num).style.opacity = 1
+            current_page = page_num;
+        }
+
+        function select_tag(tag_num){
+            for (var i = 0; i <tag_count; i++){
+            document.getElementById("tag_" + i).style.color = "#555557"
+            }
+            document.getElementById("tag_" + tag_num).style.color = "#22EEFF"
+            current_page = page_num;
+        }
+    </script>
+</body>
+</html>
