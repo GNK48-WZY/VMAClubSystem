@@ -1,41 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/MemberHomePage.css">
+    <script type="text/javascript" src="js/vue.js"></script>
 </head>
 <body>
-    <div class="club_list">
-        <div class="clubs">
-            <button onclick="select_tab(1, '#AA0000')", id="club_1">
-                <img src="Images/SampleClubLogo.jpg" alt="">
-            </button>
-            <button onclick="select_tab(2, '#AA0000')", id="club_2">
-                <img src="Images/SampleClubLogo.jpg" alt="">
-            </button>
-        </div>
-        <button onclick="select_tab(0, '#FFFFFF')", id="club_0">
-            <img src="Images/Plus.png" alt="">
-        </button>
-    </div>
-    <div class="tag_list">
-        <h1>| CLUB TAG LIST</h1>
-        <div class="tags">
-            <button onclick="select_tag(0)", id="tag_0">Tag A</button>
-            <button onclick="select_tag(1)", id="tag_1">Tag AB</button>
-            <button onclick="select_tag(2)", id="tag_2">Tag ABCDEF</button>
-            <button onclick="select_tag(3)", id="tag_3">Tag ABCDE</button>
-        </div>
-    </div>
     <div class="detail_page">
         <div class="all_club_list">
-            <section id="club">
-                <img src="Images/SampleClubImage.jpg" alt="Club Image">
+            <section v-on:click="showInfo"id="club" >
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
                 <section id="club_logo">
-                    <img src="Images/SampleClubLogo.jpg" alt="Club Logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
+                </section>
+                <p id="club_name" ><a href="www.badi,com">Technology Innovation Club</a></p>
+                <p id="club_intro">Club description here.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br>
+                    Balabala, something something.<br></p>
+            </section>
+
+            <section id="club">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
+                <section id="club_logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
                 </section>
                 <p id="club_name">Technology Innovation Club</p>
                 <p id="club_intro">Club description here.<br>
@@ -46,9 +37,9 @@
             </section>
 
             <section id="club">
-                <img src="Images/SampleClubImage.jpg" alt="Club Image">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
                 <section id="club_logo">
-                    <img src="Images/SampleClubLogo.jpg" alt="Club Logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
                 </section>
                 <p id="club_name">Technology Innovation Club</p>
                 <p id="club_intro">Club description here.<br>
@@ -59,9 +50,9 @@
             </section>
 
             <section id="club">
-                <img src="Images/SampleClubImage.jpg" alt="Club Image">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
                 <section id="club_logo">
-                    <img src="Images/SampleClubLogo.jpg" alt="Club Logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
                 </section>
                 <p id="club_name">Technology Innovation Club</p>
                 <p id="club_intro">Club description here.<br>
@@ -72,9 +63,9 @@
             </section>
 
             <section id="club">
-                <img src="Images/SampleClubImage.jpg" alt="Club Image">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
                 <section id="club_logo">
-                    <img src="Images/SampleClubLogo.jpg" alt="Club Logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
                 </section>
                 <p id="club_name">Technology Innovation Club</p>
                 <p id="club_intro">Club description here.<br>
@@ -85,9 +76,9 @@
             </section>
 
             <section id="club">
-                <img src="Images/SampleClubImage.jpg" alt="Club Image">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
                 <section id="club_logo">
-                    <img src="Images/SampleClubLogo.jpg" alt="Club Logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
                 </section>
                 <p id="club_name">Technology Innovation Club</p>
                 <p id="club_intro">Club description here.<br>
@@ -98,9 +89,9 @@
             </section>
 
             <section id="club">
-                <img src="Images/SampleClubImage.jpg" alt="Club Image">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
                 <section id="club_logo">
-                    <img src="Images/SampleClubLogo.jpg" alt="Club Logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
                 </section>
                 <p id="club_name">Technology Innovation Club</p>
                 <p id="club_intro">Club description here.<br>
@@ -111,22 +102,9 @@
             </section>
 
             <section id="club">
-                <img src="Images/SampleClubImage.jpg" alt="Club Image">
+                <img src="src/SampleClubImage.jpg" alt="Club Image">
                 <section id="club_logo">
-                    <img src="Images/SampleClubLogo.jpg" alt="Club Logo">
-                </section>
-                <p id="club_name">Technology Innovation Club</p>
-                <p id="club_intro">Club description here.<br>
-                    Balabala, something something.<br>
-                    Balabala, something something.<br>
-                    Balabala, something something.<br>
-                    Balabala, something something.<br></p>
-            </section>
-
-            <section id="club">
-                <img src="Images/SampleClubImage.jpg" alt="Club Image">
-                <section id="club_logo">
-                    <img src="Images/SampleClubLogo.jpg" alt="Club Logo">
+                    <img src="src/SampleClubLogo.jpg" alt="Club Logo">
                 </section>
                 <p id="club_name">Technology Innovation Club</p>
                 <p id="club_intro">Club description here.<br>
@@ -138,7 +116,15 @@
         </div>
     </div>
 
-    <script>
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#club',
+            methods:{
+                showInfo(){
+                    alert("wuhu")
+                }
+            }
+        })
         var current_page = 0
         var page_count = 3
         var tag_count = 4
