@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="slogans">
+        <h1><span>A Slogan</span> Will Be Placed Here</h1>
+        <p>A SUB SLOGAN WILL BE PLACED HERE TO GIVE OUR VISTIORS SOME BASIC INFOMATION ABOUT OUR SITE.</p>
+    </div>
+
+    <div class="sub_win">
+        <div class="login_win", id="login_win">
+            <h1>LOG IN</h1>
+            <p>OR</p>
+            <button onclick="to_register_page()", id=create_account>CREATE ACCOUNT</button>
+
+            <form action="">
+                <div class="inputs">
+                    <input type="text", placeholder="Username", autocapitalize="off", autocomplete="off", id="username">
+                    <input type="text", placeholder="Password", autocapitalize="off", autocomplete="off", id="password">
+                </div>
+                <div class="btns">
+                    <button id="sign_in">Sign In</button>
+                    <input type="button", value="Forgot Password" id="forgot_password">
+                </div>
+            </form>
+        </div>
+
+        <div class="register_win", id="register_win">
+            <h1>CREATE ACCOUNT</h1>
+
+            <form action="">
+                <div class="inputs">
+                    <input type="text", placeholder="Username", autocapitalize="off", autocomplete="off", id="username">
+                    <input type="text", placeholder="Password", autocapitalize="off", autocomplete="off", id="password">
+                    <input type="text", placeholder="Confirm Password", autocapitalize="off", autocomplete="off", id="confirm_pswd">
+                </div>
+                <div class="btns">
+                    <button id="register">Register</button>
+                    <input type="button", value="Back", onclick="to_login_page()", id="back">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var login_page = document.getElementById("login_win");
+        var register_page = document.getElementById("register_win");
+
+        function to_register_page(){
+            login_page.style.right = "20em";
+            register_page.style.right = "0em";
+        }
+
+        function to_login_page(){
+            login_page.style.right = "0em";
+            register_page.style.right = "-25em";
+        }
+    </script>
+
+</body>
+</html>
