@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222224;
+    display: flex;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg img {
+    opacity: 0.04;
+    width: 100%;
+    height: fit-content;
+}
+
+.Info {
+    margin: 4em;
+    width: 40vw;
+    position: absolute;
+    color: #F5F5F7;
+}
+
+.Info .ClubName h1{
+    font-weight: 800;
+    position: relative;
+}
+
+.Info .ClubInfo {
+    /* font-family: 'ZCOOL XiaoWei', serif; */
+    display: flex;
+}
+
+.Info .ClubInfo h1{
+    margin-top: 2.5em;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.Info .ClubInfo h2{
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.Info .Description h1 {
+    margin-top: 2em;
+    font-size: 18px;
+}
+
+.Info .Description p {
+    margin-top: 1em;
+    /* font-family: 'ZCOOL XiaoWei', serif; */
+}
+
+.MainPic img {
+    width: auto;
+    height: 90vh;
+    bottom: 5vh;
+    right: 5vh;
+    position: absolute;
+}
