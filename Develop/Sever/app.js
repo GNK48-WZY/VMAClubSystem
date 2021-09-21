@@ -11,6 +11,8 @@ const database = require('./mysql/mysql.js');
 
 const mainURL = 'http://127.0.0.1:8080';
 
+server.use(express.static('../Frontend'));
+
 server.get("/clubs", async (request, response, next) => {
     let id = request.query.id;
     let name_eng = request.query.name;
@@ -31,22 +33,8 @@ server.get("/clubs", async (request, response, next) => {
     response.json(json_result);
 });
 
-
 server.get('', async (request, response, next) => {
     response.sendFile( __dirname.replace('server', 'front/MemberHomePage.html'));
-})
-
-server.get('/src/SampleClubImage.jpg', async (request, response, next) => {
-    response.sendFile( __dirname.replace('server', 'front/src/SampleClubImage.jpg'));
-})
-server.get('/src/SampleClubLogo.jpg', async (request, response, next) => {
-    response.sendFile( __dirname.replace('server', 'front/src/SampleClubLogo.jpg'));
-})
-server.get('/css/MemberHomePage.css', async (request, response, next) => {
-    response.sendFile( __dirname.replace('server', 'front/css/MemberHomePage.css'));
-})
-server.get('/js/vue.js', async (request, response, next) => {
-    response.sendFile( __dirname.replace('server', 'front/js/vue.js'));
 })
 
 // http://127.0.0.1:8080
