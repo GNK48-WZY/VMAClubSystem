@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkvma_club_system_frontend"]=self["webpackChunkvma_club_system_frontend"]||[]).push([[239],{1239:(e,n,s)=>{s.r(n),s.d(n,{default:()=>r});var t=s(3673);function u(e,n){return(0,t.wg)(),(0,t.iD)("div",null,"aaa")}const a={};a.render=u;const r=a}}]);
