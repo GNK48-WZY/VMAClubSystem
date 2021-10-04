@@ -2,7 +2,12 @@
 
 VMA 社团招新系统 前端
 
-## 安装依赖
+## 准备开发环境
+Node.js >=12.22.1
+yarn
+```bash
+yarn global add @quasar/cli
+```
 ```bash
 yarn
 ```
