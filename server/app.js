@@ -11,7 +11,7 @@ const database = require('./mysql/mysql.js');
 
 const mainURL = 'http://127.0.0.1:8080';
 
-server.use(express.static('../src'));
+server.use(express.static('../frontend'));
 
 server.get("/clubs", async (request, response, next) => {
     let id = request.query.id;
