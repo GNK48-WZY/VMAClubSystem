@@ -12,7 +12,7 @@
     <template v-slot:header>
       <q-intersection transition="slide-left" once class="q-ma-lg search">
         <q-input
-          :bg-color="dark.isActive ? 'black' : 'white'"
+          :bg-color="isDark ? 'black' : 'white'"
           color="primary"
           outlined
           rounded
@@ -89,7 +89,7 @@ import { useI18n } from 'vue-i18n';
 import { useQuasar } from 'quasar';
 
 const store = useStore();
-const { dark } = useQuasar();
+const { dark: { isActive: isDark } } = useQuasar();
 const clubList = computed(() => store.getters['clubs/list']);
 const { t } = useI18n();
 

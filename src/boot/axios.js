@@ -13,18 +13,18 @@ const api = axios.create({
   timeout: 3000,
   responseType: 'json',
 });
-api.interceptors.request.use(
-  (config) => {
-    if (LocalStorage.getItem('user')) {
-      config.headers.common.Authorization = `Bearer ${LocalStorage.getItem('user').token}`;
-    }
-    return config;
-  },
-  (error) => {
-    Promise.reject(error);
-  },
-);
-export default boot(({ app }) => {
+export default boot(({ app, store }) => {
+  api.interceptors.request.use(
+    (config) => {
+      if (LocalStorage.getItem('user')) {
+        config.headers.common.Authorization = `Bearer ${store.getters['user/token']}`;
+      }
+      return config;
+    },
+    (error) => {
+      Promise.reject(error);
+    },
+  );
   // for use inside Vue files (Options API) through this.$axios and this.$api
 
   app.config.globalProperties.$axios = axios;
@@ -36,4 +36,4 @@ export default boot(({ app }) => {
   //       so you can easily perform requests against your app's API
 });
 
-export { api };
+export { api, axios };
