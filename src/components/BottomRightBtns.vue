@@ -3,6 +3,7 @@
         <q-intersection transition="rotate" once>
             <q-fab icon="add" direction="up" color="accent" push vertical-actions-align="right">
                 <q-fab-action label-position="left" color="primary" icon="mail" label="Email" />
+                a
             </q-fab>
         </q-intersection>
     </q-page-sticky>
