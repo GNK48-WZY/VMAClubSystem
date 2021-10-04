@@ -9,15 +9,10 @@ yarn
 
 ### 启动测试应用程序
 ```bash
-quasar dev
-```
-
-### 修复代码问题
-```bash
-yarn run lint
+yarn dev
 ```
 
 ### 构建生产应用程序
 ```bash
-quasar build
+yarn build:pwa
 ```
