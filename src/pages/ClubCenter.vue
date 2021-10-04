@@ -10,7 +10,7 @@
     class="qt"
   >
     <template v-slot:header>
-      <q-intersection transition="jump-left" once class="q-ma-lg search">
+      <q-intersection transition="slide-left" once class="q-ma-lg search">
         <q-input
           :bg-color="dark.isActive ? 'black' : 'white'"
           color="primary"
