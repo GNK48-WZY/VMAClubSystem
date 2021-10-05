@@ -1,5 +1,22 @@
 import { api } from 'boot/axios';
 import { Router } from 'src/router';
+import { Notify } from 'quasar';
+import { i18n } from 'src/boot/i18n';
+
+const { global: { t } } = i18n;
+
+async function loginSuccess() {
+  Notify.create({
+    type: 'positive',
+    message: t('login.message.success'),
+  });
+}
+async function loginFail(error) {
+  Notify.create({
+    type: 'negative',
+    message: error,
+  });
+}
 
 export default {
   namespaced: true,
@@ -36,6 +53,7 @@ export default {
           email: 'test@vma.edu.cn',
           token: 'test-token',
         });
+        loginSuccess();
         resolve();
       });
     },
@@ -53,12 +71,15 @@ export default {
             .then((response) => response.data)
             .then((data) => {
               commit('setUser', data);
+              loginSuccess();
               resolve(data);
             })
             .catch((error) => {
+              loginFail(error);
               reject(error);
             });
         } else {
+          loginFail('incompleteForm');
           reject('incompleteForm');
         }
       });
@@ -81,12 +102,15 @@ export default {
             .then((response) => response.data)
             .then((data) => {
               commit('setUser', data);
+              loginSuccess();
               resolve(data);
             })
             .catch((error) => {
+              loginFail(error);
               reject(error);
             });
         } else {
+          loginFail('incompleteForm');
           reject('incompleteForm');
         }
       });
@@ -94,7 +118,16 @@ export default {
     async logout({ commit }) {
       commit('setUser', { user: { token: false } });
       if (Router.currentRoute.value.meta.needAuth) {
-        Router.push({ name: 'Index' });
+        Router.push({ name: 'Login', query: { redirect: Router.currentRoute.value.path } });
+        Notify.create({
+          type: 'negative',
+          message: t('store.logOutNeedAuth'),
+        });
+      } else {
+        Notify.create({
+          type: 'warning',
+          message: t('store.logOut'),
+        });
       }
     },
   },

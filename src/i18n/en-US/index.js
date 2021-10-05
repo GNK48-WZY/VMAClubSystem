@@ -18,6 +18,10 @@ export default {
     needAuth: 'Log in to continue',
     authRedirect: 'You have logged in, Redirecting...',
   },
+  store: {
+    logOutNeedAuth: 'You have logged out, Log in to continue browse this page',
+    logOut: 'You have logged out',
+  },
   user: {
     login: 'Login',
     notLogin: 'Not logged in',

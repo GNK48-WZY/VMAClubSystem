@@ -136,9 +136,7 @@ const router = useRouter();
 
 import { ref, reactive } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useQuasar } from 'quasar';
 
-const { notify } = useQuasar();
 const { t } = useI18n();
 const tab = ref('login');
 const showPwd = ref(true);
@@ -161,10 +159,6 @@ const checkInput = async (val, name) => (val && val.length > 0) || t('login.plzI
 
 async function success() {
   router.push(route.query.redirect ?? { name: 'ClubCenter' });
-  notify({
-    type: 'positive',
-    message: t('login.message.success'),
-  });
 }
 async function mockLogin() {
   await store.dispatch('user/mockLogin').then(() => {
@@ -179,12 +173,6 @@ async function submit(type) {
   await store.dispatch(action, data)
     .then(() => {
       success();
-    })
-    .catch((msg) => {
-      notify({
-        type: 'negative',
-        message: msg,
-      });
     })
     .finally(() => {
       submitWait.value = false;

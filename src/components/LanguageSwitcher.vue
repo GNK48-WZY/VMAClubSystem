@@ -6,7 +6,7 @@
       :label="t('app.language')"
       style="min-width: 135px;"
       :color="color"
-      :bg-color="isDark ? 'black' : 'white'"
+      :bg-color="dark.isActive ? 'black' : 'white'"
       rounded
       outlined
       dense
@@ -29,7 +29,7 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const { t } = useI18n();
-const { localStorage, dark: { isActive: isDark } } = useQuasar();
+const { localStorage, dark } = useQuasar();
 const { locale } = $fromRefs(useI18n({ useScope: 'global' }));
 
 const localeOptions = [

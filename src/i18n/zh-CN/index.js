@@ -18,6 +18,10 @@ export default {
     needAuth: '登录以继续',
     authRedirect: '您已登录, 正在跳转...',
   },
+  store: {
+    logOutNeedAuth: '您已注销, 登录以继续浏览本页',
+    logOut: '您已注销',
+  },
   user: {
     login: '登录',
     notLogin: '未登录',

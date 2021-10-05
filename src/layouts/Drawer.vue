@@ -48,7 +48,7 @@ const store = useStore();
 const full = computed(() => route.meta.full);
 const user = computed(() => store.getters['user/user']);
 const isLogin = computed(() => store.getters['user/isLogin']);
-const userBtnClick = () => (isLogin.value ? store.dispatch('user/logout') : router.push({ name: 'Login' }));
+const userBtnClick = () => (isLogin.value ? store.dispatch('user/logout') : router.push({ name: 'Login', query: { redirect: route.path } }));
 
 const drawerList = [
   { icon: 'home', name: 'Index', to: { name: 'Index' } },
