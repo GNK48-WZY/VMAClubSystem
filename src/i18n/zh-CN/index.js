@@ -48,6 +48,7 @@ export default {
   login: {
     title: '登录以继续',
     plzInp: '请输入',
+    back: '暂不登录',
     types: {
       login: '登录',
       register: '注册',

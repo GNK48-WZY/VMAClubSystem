@@ -47,6 +47,7 @@ export default {
   login: {
     title: 'Sign in to continue',
     plzInp: 'Please input ',
+    back: 'Not now',
     types: {
       login: 'Login',
       register: 'Register',

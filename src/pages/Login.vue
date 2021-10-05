@@ -122,6 +122,14 @@
         </q-tab-panels>
         <q-btn label="测试登录" @click="mockLogin" />
       </q-card>
+      <q-btn
+        :label="t('login.back')"
+        class="backBtn"
+        rounded
+        outline
+        icon="arrow_back"
+        @click="back"
+      />
     </q-intersection>
   </div>
 </template>
@@ -157,6 +165,13 @@ const form = reactive({
 
 const checkInput = async (val, name) => (val && val.length > 0) || t('login.plzInp') + t(name);
 
+async function back() {
+  if (window.history.length > 0) {
+    router.go(-1);
+  } else {
+    router.push({ name: 'Index' });
+  }
+}
 async function success() {
   router.push(route.query.redirect ?? { name: 'ClubCenter' });
 }
@@ -185,6 +200,11 @@ async function submit(type) {
     width: 600px;
     max-width: 90%;
     max-height: 90%;
+    .backBtn {
+      left: 50%;
+      top: 40px;
+      transform: translate(-50%, 0);
+    }
   }
 }
 </style>
