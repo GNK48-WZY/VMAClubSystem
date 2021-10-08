@@ -9,8 +9,9 @@
                 round
                 icon="menu"
                 aria-label="Menu"
-                @click="emit('toggleDrawer')"
+                @click="toggleDrawer"
                 v-show="!full"
+                class="gt-xs"
             />
             <div style="margin: 12px 12px 0 0; position: absolute;right: 0;top: 0;">
                 <LanguageSwitcher />
@@ -27,7 +28,7 @@
 
 <script>
 import {
-  computed, defineAsyncComponent, defineComponent,
+  computed, defineAsyncComponent, defineComponent, inject,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
@@ -36,17 +37,21 @@ const LanguageSwitcher = defineAsyncComponent(() => import('components/LanguageS
 
 export default defineComponent({
   emits: ['toggleDrawer'],
-  setup(_props, { emit }) {
+  setup() {
     const { t } = useI18n();
     const route = useRoute();
 
     const full = computed(() => route.meta.full);
     const pageName = computed(() => t(route.name ? `pages.${route.name}` : 'information.error'));
+    const drawer = inject('drawer');
+    async function toggleDrawer() {
+      drawer.value = !drawer.value;
+    }
     return {
       t,
       full,
       pageName,
-      emit,
+      toggleDrawer,
     };
   },
   components: {

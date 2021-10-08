@@ -1,11 +1,11 @@
 <template>
   <q-layout view="hHh Lpr fFf">
-    <Header @toggleDrawer="toggleDrawer" />
-    <Drawer v-model="drawer" show-if-above />
-
+    <Header />
+    <Drawer />
+    <Footer />
     <q-page-container>
       <router-view v-slot="{ Component }">
-          <component :is="Component" />
+        <component :is="Component" />
       </router-view>
 
       <BottomRightBtns />
@@ -15,28 +15,33 @@
 
 <script>
 import {
-  ref, defineAsyncComponent, defineComponent,
+  ref, defineAsyncComponent, defineComponent, provide,
 } from 'vue';
 
 const Header = defineAsyncComponent(() => import('./Header'));
 const Drawer = defineAsyncComponent(() => import('./Drawer'));
+const Footer = defineAsyncComponent(() => import('./Footer'));
 const BottomRightBtns = defineAsyncComponent(() => import('components/BottomRightBtns'));
 
 export default defineComponent({
   setup() {
     const drawer = ref(true);
-    async function toggleDrawer() {
-      drawer.value = !drawer.value;
-    }
+    const goList = [
+      { icon: 'home', name: 'Index', to: { name: 'Index' } },
+      { icon: 'school', name: 'ClubCenter', to: { name: 'ClubCenter' } },
+      { icon: 'manage_accounts', name: 'UserCenter', to: { name: 'UserCenter' } },
+      { icon: 'help', name: 'Help', to: { name: 'Help' } },
+    ];
+    provide('goList', goList);
+    provide('drawer', drawer);
     return {
       BottomRightBtns,
-      drawer,
-      toggleDrawer,
     };
   },
   components: {
     Header,
     Drawer,
+    Footer,
     BottomRightBtns,
   },
 });

@@ -1,9 +1,13 @@
 <template>
-  <q-drawer bordered v-show="!full">
-    <q-img class="absolute-top" src="https://cdn.quasar.dev/img/material.png" style="height: 150px">
+  <q-drawer v-model="drawer" show-if-above elevated v-show="!full" :width="250" no-swipe-open>
+    <q-img
+      class="absolute-top"
+      :src="require('assets/image/background/drawer.png')"
+      style="height: 150px"
+    >
       <div class="absolute-bottom bg-transparent">
         <q-avatar size="56px" class="q-mb-sm" v-if="isLogin">
-          <img :src="user.avatar" />
+          <img :src="!!user.avatar ? user.avatar : require('assets/image/user/avatar.png')" />
         </q-avatar>
         <div class="text-weight-bold">{{ isLogin ? user.name : t('user.notLogin') }}</div>
         <div v-if="isLogin">{{ user.id }}</div>
@@ -34,7 +38,7 @@
 </template>
 <script>
 import {
-  computed, defineComponent,
+  computed, defineComponent, inject,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
@@ -51,13 +55,8 @@ export default defineComponent({
     const user = computed(() => store.getters['user/user']);
     const isLogin = computed(() => store.getters['user/isLogin']);
     const userBtnClick = () => (isLogin.value ? store.dispatch('user/logout') : router.push({ name: 'Login', query: { redirect: route.path } }));
-
-    const drawerList = [
-      { icon: 'home', name: 'Index', to: { name: 'Index' } },
-      { icon: 'school', name: 'ClubCenter', to: { name: 'ClubCenter' } },
-      { icon: 'manage_accounts', name: 'UserCenter', to: { name: 'UserCenter' } },
-      { icon: 'help', name: 'Help', to: { name: 'Help' } },
-    ];
+    const drawer = inject('drawer');
+    const drawerList = inject('goList');
     return {
       t,
       full,
@@ -65,6 +64,7 @@ export default defineComponent({
       isLogin,
       userBtnClick,
       drawerList,
+      drawer,
     };
   },
 });

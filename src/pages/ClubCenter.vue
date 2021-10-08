@@ -29,14 +29,16 @@
       </q-intersection>
     </template>
     <template v-slot:item="props">
-      <ClubCard
-        :id="props.row.id"
-        :name="props.row.name"
-        :img="props.row.imgUrl"
-        :requirement="props.row.requirement"
-        :description="props.row.description"
-        :location="props.row.location"
-      />
+      <q-intersection class="col-md-3 col-sm-4 col-12 q-pa-md" transition="scale" once>
+        <ClubCard
+          :id="props.row.id"
+          :name="props.row.name"
+          :img="props.row.imgUrl"
+          :requirement="props.row.requirement"
+          :description="props.row.description"
+          :location="props.row.location"
+        />
+      </q-intersection>
     </template>
     <template v-slot:no-data="{ message }">
       <div class="text-primary column fit">
@@ -59,9 +61,6 @@ import { useQuasar } from 'quasar';
 const ClubCard = defineAsyncComponent(() => import('components/ClubCard'));
 
 export default defineComponent({
-  components: {
-    ClubCard,
-  },
   setup() {
     const store = useStore();
     const { dark } = useQuasar();
@@ -75,6 +74,9 @@ export default defineComponent({
       t,
       filter,
     };
+  },
+  components: {
+    ClubCard,
   },
 });
 </script>
