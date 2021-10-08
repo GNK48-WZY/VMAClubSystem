@@ -7,12 +7,12 @@
     :filter="filter"
     :no-data-label="t('club.noData')"
     :no-results-label="t('club.noResults')"
-    class="qt"
+    class="qt q-pa-md"
   >
     <template v-slot:header>
       <q-intersection transition="slide-left" once class="q-ma-lg search">
         <q-input
-          :bg-color="dark.isActive ? 'black' : 'white'"
+          :bg-color="dark.isActive ? 'halfBlack' : 'halfWhite'"
           color="primary"
           outlined
           rounded
@@ -85,9 +85,14 @@ export default defineComponent({
     z-index: 1;
     right: 0;
     min-width: 50px;
-    opacity: 0.5;
     :deep(.q-field__control) {
       backdrop-filter: saturate(180%) blur(20px);
+    }
+    :deep(.bg-halfBlack) {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    :deep(.bg-halfWhite) {
+      background: rgba(255, 255, 255, 0.5);
     }
   }
 }

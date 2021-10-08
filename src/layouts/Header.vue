@@ -13,7 +13,7 @@
                 v-show="!full"
             />
             <div style="margin: 12px 12px 0 0; position: absolute;right: 0;top: 0;">
-                <LanguageSwitcher color="accent" />
+                <LanguageSwitcher />
             </div>
         </q-toolbar>
         <q-toolbar inset>

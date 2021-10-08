@@ -86,7 +86,7 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
-$card-width: 344px;
+$card-width: 337px;
 .card {
   @media screen and (min-width: $card-width) {
     width: $card-width;
