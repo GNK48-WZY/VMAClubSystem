@@ -19,28 +19,38 @@
     </q-select>
   </q-intersection>
 </template>
-<script setup>
+<script>
 import {
-  watch, $fromRefs, $raw, defineProps, $computed,
+  watch, computed, defineComponent,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuasar } from 'quasar';
 import { useRoute } from 'vue-router';
 
-const route = useRoute();
-const { t } = useI18n();
-const { localStorage, dark } = useQuasar();
-const { locale } = $fromRefs(useI18n({ useScope: 'global' }));
+export default defineComponent({
+  props: ['color'],
+  setup() {
+    const route = useRoute();
+    const { t } = useI18n();
+    const { localStorage, dark } = useQuasar();
+    const { locale } = useI18n({ useScope: 'global' });
 
-const localeOptions = [
-  { value: 'zh-CN', label: '中文' },
-  { value: 'en-US', label: 'English' },
-];
-const routeName = $computed(() => route.name);
+    const localeOptions = [
+      { value: 'zh-CN', label: '中文' },
+      { value: 'en-US', label: 'English' },
+    ];
+    const routeName = computed(() => route.name);
 
-watch($raw(locale), async (lang) => {
-  localStorage.set('lang', lang);
-  window.document.title = `${t(`pages.${routeName}`)}-${t('app.name')}`;
+    watch(locale, async (lang) => {
+      localStorage.set('lang', lang);
+      window.document.title = `${t(`pages.${routeName.value}`)}-${t('app.name')}`;
+    });
+    return {
+      t,
+      dark,
+      localeOptions,
+      locale,
+    };
+  },
 });
-defineProps(['color']);
 </script>

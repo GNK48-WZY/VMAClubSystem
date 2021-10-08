@@ -25,20 +25,32 @@
     </q-header>
 </template>
 
-<script setup>
+<script>
 import {
-  computed, defineEmits, defineAsyncComponent,
+  computed, defineAsyncComponent, defineComponent,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
 const LanguageSwitcher = defineAsyncComponent(() => import('components/LanguageSwitcher'));
 
-const { t } = useI18n();
-const route = useRoute();
+export default defineComponent({
+  emits: ['toggleDrawer'],
+  setup(_props, { emit }) {
+    const { t } = useI18n();
+    const route = useRoute();
 
-const full = computed(() => route.meta.full);
-const pageName = computed(() => t(route.name ? `pages.${route.name}` : 'information.error'));
-const emit = defineEmits(['toggleDrawer']);
-
+    const full = computed(() => route.meta.full);
+    const pageName = computed(() => t(route.name ? `pages.${route.name}` : 'information.error'));
+    return {
+      t,
+      full,
+      pageName,
+      emit,
+    };
+  },
+  components: {
+    LanguageSwitcher,
+  },
+});
 </script>

@@ -134,65 +134,79 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { useRoute, useRouter } from 'vue-router';
 import { useStore } from 'vuex';
-
-const store = useStore();
-const route = useRoute();
-const router = useRouter();
-
-import { ref, reactive } from 'vue';
+import { ref, reactive, defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
-const tab = ref('login');
-const showPwd = ref(true);
-const submitWait = ref(false);
-const form = reactive({
-  login: {
-    email: '',
-    password: '',
-  },
-  register: {
-    accept: false,
-    name: '',
-    id: 0,
-    email: '',
-    password: '',
+export default defineComponent({
+  setup() {
+    const store = useStore();
+    const route = useRoute();
+    const router = useRouter();
+
+    const { t } = useI18n();
+    const tab = ref('login');
+    const showPwd = ref(true);
+    const submitWait = ref(false);
+    const form = reactive({
+      login: {
+        email: '',
+        password: '',
+      },
+      register: {
+        accept: false,
+        name: '',
+        id: 0,
+        email: '',
+        password: '',
+      },
+    });
+
+    const checkInput = async (val, name) => (val && val.length > 0) || t('login.plzInp') + t(name);
+
+    async function back() {
+      if (window.history.length > 0) {
+        router.go(-1);
+      } else {
+        router.push({ name: 'Index' });
+      }
+    }
+    async function success() {
+      router.push(route.query.redirect ?? { name: 'ClubCenter' });
+    }
+    async function mockLogin() {
+      await store.dispatch('user/mockLogin').then(() => {
+        success();
+      });
+    }
+    async function submit(type) {
+      if (submitWait.value) return;
+      const data = type ? form.register : form.login;
+      const action = type ? 'user/register' : 'user/login';
+      submitWait.value = true;
+      await store.dispatch(action, data)
+        .then(() => {
+          success();
+        })
+        .finally(() => {
+          submitWait.value = false;
+        });
+    }
+    return {
+      t,
+      tab,
+      showPwd,
+      submitWait,
+      form,
+      checkInput,
+      back,
+      mockLogin,
+      submit,
+    };
   },
 });
-
-const checkInput = async (val, name) => (val && val.length > 0) || t('login.plzInp') + t(name);
-
-async function back() {
-  if (window.history.length > 0) {
-    router.go(-1);
-  } else {
-    router.push({ name: 'Index' });
-  }
-}
-async function success() {
-  router.push(route.query.redirect ?? { name: 'ClubCenter' });
-}
-async function mockLogin() {
-  await store.dispatch('user/mockLogin').then(() => {
-    success();
-  });
-}
-async function submit(type) {
-  if (submitWait.value) return;
-  const data = type ? form.register : form.login;
-  const action = type ? 'user/register' : 'user/login';
-  submitWait.value = true;
-  await store.dispatch(action, data)
-    .then(() => {
-      success();
-    })
-    .finally(() => {
-      submitWait.value = false;
-    });
-}
 </script>
 <style lang="scss" scoped>
 .login-warp {

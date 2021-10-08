@@ -32,28 +32,40 @@
     </q-scroll-area>
   </q-drawer>
 </template>
-<script setup>
+<script>
 import {
-  computed,
+  computed, defineComponent,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 
-const { t } = useI18n();
-const route = useRoute();
-const router = useRouter();
-const store = useStore();
+export default defineComponent({
+  setup() {
+    const { t } = useI18n();
+    const route = useRoute();
+    const router = useRouter();
+    const store = useStore();
 
-const full = computed(() => route.meta.full);
-const user = computed(() => store.getters['user/user']);
-const isLogin = computed(() => store.getters['user/isLogin']);
-const userBtnClick = () => (isLogin.value ? store.dispatch('user/logout') : router.push({ name: 'Login', query: { redirect: route.path } }));
+    const full = computed(() => route.meta.full);
+    const user = computed(() => store.getters['user/user']);
+    const isLogin = computed(() => store.getters['user/isLogin']);
+    const userBtnClick = () => (isLogin.value ? store.dispatch('user/logout') : router.push({ name: 'Login', query: { redirect: route.path } }));
 
-const drawerList = [
-  { icon: 'home', name: 'Index', to: { name: 'Index' } },
-  { icon: 'school', name: 'ClubCenter', to: { name: 'ClubCenter' } },
-  { icon: 'manage_accounts', name: 'UserCenter', to: { name: 'UserCenter' } },
-  { icon: 'help', name: 'Help', to: { name: 'Help' } },
-];
+    const drawerList = [
+      { icon: 'home', name: 'Index', to: { name: 'Index' } },
+      { icon: 'school', name: 'ClubCenter', to: { name: 'ClubCenter' } },
+      { icon: 'manage_accounts', name: 'UserCenter', to: { name: 'UserCenter' } },
+      { icon: 'help', name: 'Help', to: { name: 'Help' } },
+    ];
+    return {
+      t,
+      full,
+      user,
+      isLogin,
+      userBtnClick,
+      drawerList,
+    };
+  },
+});
 </script>

@@ -13,17 +13,31 @@
   </q-layout>
 </template>
 
-<script setup>
+<script>
 import {
-  $ref, defineAsyncComponent,
+  ref, defineAsyncComponent, defineComponent,
 } from 'vue';
 
 const Header = defineAsyncComponent(() => import('./Header'));
 const Drawer = defineAsyncComponent(() => import('./Drawer'));
 const BottomRightBtns = defineAsyncComponent(() => import('components/BottomRightBtns'));
 
-let drawer = $ref(true);
-async function toggleDrawer() {
-  drawer = !drawer;
-}
+export default defineComponent({
+  setup() {
+    const drawer = ref(true);
+    async function toggleDrawer() {
+      drawer.value = !drawer.value;
+    }
+    return {
+      BottomRightBtns,
+      drawer,
+      toggleDrawer,
+    };
+  },
+  components: {
+    Header,
+    Drawer,
+    BottomRightBtns,
+  },
+});
 </script>

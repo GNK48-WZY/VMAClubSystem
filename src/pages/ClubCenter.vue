@@ -82,18 +82,28 @@
     </template>
   </q-table>
 </template>
-<script setup>
+<script>
 import { useStore } from 'vuex';
-import { computed, ref } from 'vue';
+import { computed, ref, defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuasar } from 'quasar';
 
-const store = useStore();
-const { dark } = useQuasar();
-const clubList = computed(() => store.getters['clubs/list']);
-const { t } = useI18n();
+export default defineComponent({
+  setup() {
+    const store = useStore();
+    const { dark } = useQuasar();
+    const clubList = computed(() => store.getters['clubs/list']);
+    const { t } = useI18n();
 
-const filter = ref('');
+    const filter = ref('');
+    return {
+      dark,
+      clubList,
+      t,
+      filter,
+    };
+  },
+});
 </script>
 <style lang="scss" scoped>
 $card-width: 344px;
