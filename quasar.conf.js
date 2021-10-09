@@ -74,13 +74,6 @@ module.exports = configure((ctx) => ({
     chainWebpack(chain) {
       chain.plugin('eslint-webpack-plugin')
         .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }]);
-      chain.module
-        .rule('vue')
-        .use('vue-loader')
-        .tap((options) => ({
-          ...options,
-          refSugar: true,
-        }));
     },
   },
 
@@ -95,7 +88,7 @@ module.exports = configure((ctx) => ({
   framework: {
     config: {
       loadingBar: {
-        color: 'accent',
+        color: 'white',
       },
       dark: 'auto',
     },
