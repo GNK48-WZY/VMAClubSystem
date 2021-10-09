@@ -4,6 +4,7 @@
     :options="localeOptions"
     :label="t('app.language')"
     style="min-width: 135px;"
+    dark
     rounded
     standout
     dense

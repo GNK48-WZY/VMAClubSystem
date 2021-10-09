@@ -6,9 +6,8 @@
       <router-link :to="{ path: `/club/${id.toString()}` }">
         <q-btn
           fab
-          push
           color="primary"
-          icon="preview"
+          icon="travel_explore"
           class="absolute"
           style="top: 0; right: 12px; transform: translateY(-50%)"
         >
