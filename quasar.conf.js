@@ -8,7 +8,6 @@
 
 /* eslint-env node */
 const ESLintPlugin = require('eslint-webpack-plugin');
-const zlib = require('zlib');
 /* eslint func-names: 0 */
 /* eslint global-require: 0 */
 const { configure } = require('quasar/wrappers');
@@ -62,17 +61,9 @@ module.exports = configure((ctx) => ({
     preloadChunks: true,
     // showProgress: false,
     gzip: {
-      filename: '[path][base].br',
+      filename: '[path][base].gz',
       test: /\.js$|\.css$|\.html$/,
-      algorithm: 'brotliCompress',
-      threshold: 10240,
-      minRatio: 0.8,
       deleteOriginalAssets: false,
-      compressionOptions: {
-        params: {
-          [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
-        },
-      },
     },
     analyze: true,
 
