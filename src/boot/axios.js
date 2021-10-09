@@ -1,6 +1,5 @@
 import { boot } from 'quasar/wrappers';
 import axios from 'axios';
-import { LocalStorage } from 'quasar';
 
 // Be careful when using SSR for cross-request state pollution
 // due to creating a Singleton instance here;
@@ -16,7 +15,7 @@ const api = axios.create({
 export default boot(({ app, store }) => {
   api.interceptors.request.use(
     (config) => {
-      if (LocalStorage.getItem('user')) {
+      if (store.getters['user/token']) {
         config.headers.common.Authorization = `Bearer ${store.getters['user/token']}`;
       }
       return config;

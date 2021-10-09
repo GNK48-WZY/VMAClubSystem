@@ -1,7 +1,7 @@
 <template>
   <div></div>
 </template>
-<script setup>
+<script>
 // import { useStore } from 'vuex';
 // import { $computed } from 'vue';
 
