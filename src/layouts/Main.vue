@@ -15,13 +15,13 @@
 
 <script>
 import {
-  ref, defineAsyncComponent, defineComponent, provide,
+  ref, defineComponent, provide,
 } from 'vue';
 
-const Header = defineAsyncComponent(() => import('./Header'));
-const Drawer = defineAsyncComponent(() => import('./Drawer'));
-const Footer = defineAsyncComponent(() => import('./Footer'));
-const BottomRightBtns = defineAsyncComponent(() => import('components/BottomRightBtns'));
+import BottomRightBtns from 'components/BottomRightBtns';
+import Header from './Header';
+import Drawer from './Drawer';
+import Footer from './Footer';
 
 export default defineComponent({
   setup() {
@@ -34,9 +34,6 @@ export default defineComponent({
     ];
     provide('goList', goList);
     provide('drawer', drawer);
-    return {
-      BottomRightBtns,
-    };
   },
   components: {
     Header,

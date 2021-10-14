@@ -51,8 +51,47 @@ export default {
         location: 'Room 422',
       },
     ],
+    carousel: [
+      {
+        id: 0,
+        name: '宣传',
+        description: '宣传介绍',
+        imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg',
+      },
+      {
+        id: 1,
+        name: '宣传1',
+        description: '宣传介绍1',
+        imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg',
+      },
+      {
+        id: 2,
+        name: '宣传2',
+        description: '宣传介绍2',
+        imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg',
+      },
+      {
+        id: 3,
+        name: '宣传3',
+        description: '宣传介绍3',
+        imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg',
+      },
+      {
+        id: 4,
+        name: '宣传4',
+        description: '宣传介绍4',
+        imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg',
+      },
+      {
+        id: 5,
+        name: '宣传5',
+        description: '宣传介绍5',
+        imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg',
+      },
+    ],
   }),
   getters: {
     list: (state) => state.list,
+    carousel: (state) => state.carousel,
   },
 };

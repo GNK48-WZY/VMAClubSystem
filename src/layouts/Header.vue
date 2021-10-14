@@ -28,12 +28,12 @@
 
 <script>
 import {
-  computed, defineAsyncComponent, defineComponent, inject,
+  computed, defineComponent, inject,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
-const LanguageSwitcher = defineAsyncComponent(() => import('components/LanguageSwitcher'));
+import LanguageSwitcher from 'components/LanguageSwitcher';
 
 export default defineComponent({
   emits: ['toggleDrawer'],

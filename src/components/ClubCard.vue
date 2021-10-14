@@ -32,7 +32,6 @@
       <div class="text-subtitle1">{{ requirement }}</div>
       <div class="text-caption text-grey">{{ description }}</div>
     </q-card-section>
-    <q-separator />
     <q-card-actions align="right">
       <q-btn flat color="primary" icon="person_add">{{ t("club.signUp") }}</q-btn>
       <q-btn flat color="green" icon="add_shopping_cart">

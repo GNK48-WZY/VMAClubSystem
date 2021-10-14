@@ -1,4 +1,32 @@
 <template>
+  <q-intersection transition="jump-up" once>
+    <q-carousel
+      animated
+      v-model="carousel.current"
+      navigation
+      infinite
+      :autoplay="carousel.autoplay"
+      arrows
+      height="calc(50vh)"
+      transition-prev="slide-right"
+      transition-next="slide-left"
+      @mouseenter="carousel.autoplay = false"
+      @mouseleave="carousel.autoplay = true"
+    >
+      <q-carousel-slide
+        v-for="item in carouselList"
+        :key="item.id"
+        :name="item.id"
+        :img-src="item.imgUrl"
+      >
+        <div class="absolute-bottom custom-caption" :class="dark.isActive ? 'black':'white'">
+          <div class="text-h2">{{ item.name }}</div>
+          <div class="text-subtitle1">{{ item.description }}</div>
+        </div>
+      </q-carousel-slide>
+    </q-carousel>
+  </q-intersection>
+
   <q-table
     grid
     grid-header
@@ -53,24 +81,31 @@
 <script>
 import { useStore } from 'vuex';
 import {
-  computed, ref, defineComponent, defineAsyncComponent,
+  computed, ref, defineComponent, reactive,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuasar } from 'quasar';
 
-const ClubCard = defineAsyncComponent(() => import('components/ClubCard'));
+import ClubCard from 'components/ClubCard';
 
 export default defineComponent({
   setup() {
     const store = useStore();
     const { dark } = useQuasar();
+    const carouselList = computed(() => store.getters['clubs/carousel']);
     const clubList = computed(() => store.getters['clubs/list']);
     const { t } = useI18n();
 
     const filter = ref('');
+    const carousel = reactive({
+      current: 0,
+      autoplay: false,
+    });
     return {
       dark,
       clubList,
+      carousel,
+      carouselList,
       t,
       filter,
     };
@@ -81,12 +116,29 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
+.custom-caption {
+  text-align: center;
+  padding: 52px;
+  color: white;
+  &.black{
+    background-image: linear-gradient(
+    rgba(17, 19, 25, 0) 2%,
+    rgb(17, 19, 25) 94%
+  );
+  }
+  &.white{
+    background-image: linear-gradient(
+    rgb(255, 255, 255, 0) 90%,
+    rgb(255, 255, 255) 100%
+  );
+  }
+}
 .qt {
   .search {
     position: fixed;
     z-index: 1;
     right: 0;
-    min-width: 50px;
+    top: 105px;
     :deep(.q-field__control) {
       backdrop-filter: saturate(180%) blur(20px);
     }
