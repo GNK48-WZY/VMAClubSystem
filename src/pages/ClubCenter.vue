@@ -1,30 +1,6 @@
 <template>
   <q-intersection transition="jump-up" once>
-    <q-carousel
-      animated
-      v-model="carousel.current"
-      navigation
-      infinite
-      :autoplay="carousel.autoplay"
-      arrows
-      height="calc(50vh)"
-      transition-prev="slide-right"
-      transition-next="slide-left"
-      @mouseenter="carousel.autoplay = false"
-      @mouseleave="carousel.autoplay = true"
-    >
-      <q-carousel-slide
-        v-for="item in carouselList"
-        :key="item.id"
-        :name="item.id"
-        :img-src="item.imgUrl"
-      >
-        <div class="absolute-bottom custom-caption" :class="dark.isActive ? 'black':'white'">
-          <div class="text-h2">{{ item.name }}</div>
-          <div class="text-subtitle1">{{ item.description }}</div>
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
+    <Carousel :list="carouselList" />
   </q-intersection>
 
   <q-table
@@ -58,7 +34,7 @@
     </template>
     <template v-slot:item="props">
       <q-intersection class="col-md-3 col-sm-4 col-12 q-pa-md" transition="scale" once>
-        <ClubCard
+        <Card
           :id="props.row.id"
           :name="props.row.name"
           :img="props.row.imgUrl"
@@ -81,12 +57,13 @@
 <script>
 import { useStore } from 'vuex';
 import {
-  computed, ref, defineComponent, reactive,
+  computed, ref, defineComponent,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuasar } from 'quasar';
 
-import ClubCard from 'components/ClubCard';
+import Carousel from 'components/club/Carousel';
+import Card from 'components/club/Card';
 
 export default defineComponent({
   setup() {
@@ -97,42 +74,21 @@ export default defineComponent({
     const { t } = useI18n();
 
     const filter = ref('');
-    const carousel = reactive({
-      current: 0,
-      autoplay: false,
-    });
     return {
       dark,
       clubList,
-      carousel,
       carouselList,
       t,
       filter,
     };
   },
   components: {
-    ClubCard,
+    Card,
+    Carousel,
   },
 });
 </script>
 <style lang="scss" scoped>
-.custom-caption {
-  text-align: center;
-  padding: 52px;
-  color: white;
-  &.black{
-    background-image: linear-gradient(
-    rgba(17, 19, 25, 0) 2%,
-    rgb(17, 19, 25) 94%
-  );
-  }
-  &.white{
-    background-image: linear-gradient(
-    rgb(255, 255, 255, 0) 90%,
-    rgb(255, 255, 255) 100%
-  );
-  }
-}
 .qt {
   .search {
     position: fixed;
