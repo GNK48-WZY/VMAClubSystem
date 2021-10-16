@@ -37,8 +37,11 @@ export default defineComponent({
     ];
     const routeName = computed(() => route.name);
 
+    window.document.documentElement.lang = locale.value;
+
     watch(locale, async (lang) => {
       localStorage.set('lang', lang);
+      window.document.documentElement.lang = lang;
       window.document.title = `${t(`pages.${routeName.value}`)}-${t('app.name')}`;
     });
     return {
