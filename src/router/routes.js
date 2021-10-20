@@ -3,10 +3,6 @@ const routes = [
     name: 'Index',
     path: '/',
     component: () => import('src/pages/Index.vue'),
-    meta: {
-      needAuth: false,
-      full: false,
-    },
   },
   {
     name: 'ClubCenter',
@@ -14,7 +10,6 @@ const routes = [
     component: () => import('src/pages/ClubCenter.vue'),
     meta: {
       needAuth: true,
-      full: false,
     },
   },
   {
@@ -23,7 +18,6 @@ const routes = [
     component: () => import('pages/ClubDetail.vue'),
     meta: {
       needAuth: true,
-      full: false,
     },
   },
   {
@@ -32,25 +26,22 @@ const routes = [
     component: () => import('pages/UserCenter.vue'),
     meta: {
       needAuth: true,
-      full: false,
     },
   },
   {
     name: 'Help',
     path: '/help',
     component: () => import('pages/Help.vue'),
-    meta: {
-      needAuth: false,
-      full: false,
-    },
   },
   {
-    name: 'Login',
+    name: 'Sign',
     path: '/login',
-    component: () => import('pages/Login.vue'),
+    component: () => import('pages/Sign.vue'),
     meta: {
-      needAuth: false,
-      full: true,
+      showDrawer: false,
+      showFooter: false,
+      showHeader: false,
+      showBRB: false,
     },
   },
   {
@@ -58,8 +49,10 @@ const routes = [
     path: '/:catchAll(.*)*',
     component: () => import('pages/404.vue'),
     meta: {
-      needAuth: false,
-      full: true,
+      showDrawer: false,
+      showFooter: false,
+      showHeader: false,
+      showBRB: false,
     },
   },
 ];

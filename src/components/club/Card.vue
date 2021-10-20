@@ -1,6 +1,6 @@
 <template>
-  <q-card>
-    <q-img :src="img" />
+  <q-card flat bordered class="bg-transparent card">
+    <q-img :src="img" class="pic" />
 
     <q-card-section>
       <router-link :to="{ path: `/club/${id.toString()}` }">
@@ -12,8 +12,8 @@
           style="top: 0; right: 12px; transform: translateY(-50%)"
         >
           <q-tooltip
-            transition-show="flip-right"
-            transition-hide="flip-left"
+            transition-show="jump-up"
+            transition-hide="jump-down"
             anchor="top middle"
             self="bottom middle"
           >{{ t("club.viewDetails") }}</q-tooltip>
@@ -21,7 +21,7 @@
       </router-link>
 
       <div class="row no-wrap items-center">
-        <div class="col text-h6 ellipsis">{{ name }}</div>
+        <div class="col text-h6 ellipsis text-black">{{ name }}</div>
         <div class="col-auto text-grey text-caption q-pt-md row no-wrap items-center">
           <q-icon name="place" />
           {{ location }}
@@ -32,7 +32,8 @@
       <div class="text-subtitle1">{{ requirement }}</div>
       <div class="text-caption text-grey">{{ description }}</div>
     </q-card-section>
-    <q-card-actions align="right">
+    <q-separator />
+    <q-card-actions align="between">
       <q-btn flat color="primary" icon="person_add">{{ t("club.signUp") }}</q-btn>
       <q-btn flat color="green" icon="add_shopping_cart">
         {{
@@ -81,3 +82,12 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="scss" scoped>
+.card,
+.pic :deep(img) {
+  border-radius: 10px;
+}
+.card {
+  min-width: 230px;
+}
+</style>

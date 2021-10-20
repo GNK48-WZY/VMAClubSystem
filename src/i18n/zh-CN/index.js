@@ -12,20 +12,23 @@ export default {
     UserCenter: '用户中心',
     Help: '帮助',
     ClubDetail: '社团详情',
-    Login: '登录',
+    Sign: '登录',
   },
   router: {
     needAuth: '登录以继续',
     authRedirect: '您已登录, 正在跳转...',
   },
   store: {
-    logOutNeedAuth: '您已注销, 登录以继续浏览本页',
-    logOut: '您已注销',
+    signOutNeedAuth: '您已注销, 登录以继续浏览本页',
+    signOut: '您已注销',
   },
   user: {
-    login: '登录',
-    notLogin: '未登录',
-    logOut: '注销',
+    signIn: '登录',
+    notSignIn: '未登录',
+    signOut: '注销',
+    manage: '管理你的账户',
+    policy: '隐私政策',
+    service: '服务条款',
   },
   club: {
     list: {
@@ -37,7 +40,6 @@ export default {
     noData: '无社团',
     noResults: '未找到符合条件的社团',
     search: '搜索',
-    login: '登录',
     signUp: '报名',
     joinList: '加入愿望清单',
     viewDetails: '查看详情',
@@ -45,7 +47,7 @@ export default {
   404: {
     goTo: '前往',
   },
-  login: {
+  sign: {
     title: '登录以继续',
     plzInp: '请输入',
     back: '暂不登录',

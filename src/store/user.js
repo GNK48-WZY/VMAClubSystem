@@ -5,13 +5,13 @@ import { i18n } from 'src/boot/i18n';
 
 const { global: { t } } = i18n;
 
-async function loginSuccess() {
+async function signInSuccess() {
   Notify.create({
     type: 'positive',
-    message: t('login.message.success'),
+    message: t('sign.message.success'),
   });
 }
-async function loginFail(error) {
+async function signInFail(error) {
   Notify.create({
     type: 'negative',
     message: error,
@@ -45,7 +45,7 @@ export default {
     },
   },
   actions: {
-    async mockLogin({ commit }) {
+    async mockSignIn({ commit }) {
       return new Promise((resolve) => {
         commit('setUser', {
           name: '测试用户',
@@ -53,11 +53,11 @@ export default {
           email: 'test@vma.edu.cn',
           token: 'test-token',
         });
-        loginSuccess();
+        signInSuccess();
         resolve();
       });
     },
-    async login({ commit }, { email, password }) {
+    async signIn({ commit }, { email, password }) {
       return new Promise((resolve, reject) => {
         if (!!email && !!password) {
           api({
@@ -71,15 +71,15 @@ export default {
             .then((response) => response.data)
             .then((data) => {
               commit('setUser', data);
-              loginSuccess();
+              signInSuccess();
               resolve(data);
             })
             .catch((error) => {
-              loginFail(error);
+              signInFail(error);
               reject(error);
             });
         } else {
-          loginFail('incompleteForm');
+          signInFail('incompleteForm');
           reject('incompleteForm');
         }
       });
@@ -102,37 +102,37 @@ export default {
             .then((response) => response.data)
             .then((data) => {
               commit('setUser', data);
-              loginSuccess();
+              signInSuccess();
               resolve(data);
             })
             .catch((error) => {
-              loginFail(error);
+              signInFail(error);
               reject(error);
             });
         } else {
-          loginFail('incompleteForm');
+          signInFail('incompleteForm');
           reject('incompleteForm');
         }
       });
     },
-    async logout({ commit }) {
+    async signOut({ commit }) {
       commit('setUser', { user: { token: false } });
       if (Router.currentRoute.value.meta.needAuth) {
-        Router.push({ name: 'Login', query: { redirect: Router.currentRoute.value.path } });
+        Router.push({ name: 'Sign', query: { redirect: Router.currentRoute.value.path } });
         Notify.create({
           type: 'negative',
-          message: t('store.logOutNeedAuth'),
+          message: t('store.signOutNeedAuth'),
         });
       } else {
         Notify.create({
           type: 'warning',
-          message: t('store.logOut'),
+          message: t('store.signOut'),
         });
       }
     },
   },
   getters: {
-    isLogin: (state) => !!(state.user.token),
+    isSignIn: (state) => !!(state.user.token),
     user: (state) => state.user,
     token: (state) => state.token,
   },

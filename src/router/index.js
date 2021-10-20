@@ -30,8 +30,8 @@ export default route(({ store }) => {
       LoadingBar.start();
       next();
     }
-    if (to.name === 'Login') {
-      if (!store.getters['user/isLogin']) {
+    if (to.name === 'Sign') {
+      if (!store.getters['user/isSignIn']) {
         startContinue();
       } else {
         Router.push(to.query.redirect ?? { name: 'ClubCenter' });
@@ -40,11 +40,11 @@ export default route(({ store }) => {
           message: t('router.authRedirect'),
         });
       }
-    } else if (to.meta.needAuth) {
-      if (store.getters['user/isLogin']) {
+    } else if (to.meta.needAuth || false) {
+      if (store.getters['user/isSignIn']) {
         startContinue();
       } else {
-        Router.push({ name: 'Login', query: { redirect: to.fullPath } });
+        Router.push({ name: 'Sign', query: { redirect: to.fullPath } });
         Notify.create({
           type: 'negative',
           message: t('router.needAuth'),
@@ -54,8 +54,7 @@ export default route(({ store }) => {
       startContinue();
     }
   });
-  Router.afterEach((to) => {
-    window.document.title = `${t(`pages.${to.name}`)}-${t('app.name')}`;
+  Router.afterEach(() => {
     LoadingBar.stop();
   });
   return Router;

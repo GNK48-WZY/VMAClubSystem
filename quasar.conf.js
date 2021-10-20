@@ -88,7 +88,7 @@ module.exports = configure((ctx) => ({
   framework: {
     config: {
       loadingBar: {
-        color: 'white',
+        color: 'blue',
       },
       dark: 'auto',
     },
@@ -109,6 +109,7 @@ module.exports = configure((ctx) => ({
       'Notify',
       'LoadingBar',
       'Dark',
+      'Meta',
     ],
   },
 

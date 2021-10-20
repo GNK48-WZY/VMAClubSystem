@@ -1,16 +1,22 @@
 <template>
-    <q-footer v-show="!full" class="lt-sm">
-        <q-tabs align="justify">
-            <q-route-tab
-                v-for="item in tabList"
-                :icon="item.icon"
-                :label="t(`pages.${item.name}`)"
-                :key="item.name"
-                :to="item.to"
-                exact
-            />
-        </q-tabs>
-    </q-footer>
+  <q-footer v-if="show" class="lt-sm">
+    <q-tabs
+      class="tabs shadow-8"
+      align="justify"
+      dense
+      indicator-color="transparent"
+      active-color="primary"
+    >
+      <q-route-tab
+        v-for="item in tabList"
+        :icon="item.icon"
+        :label="t(`pages.${item.name}`)"
+        :key="item.name"
+        :to="item.to"
+        exact
+      />
+    </q-tabs>
+  </q-footer>
 </template>
 <script>
 import {
@@ -24,13 +30,28 @@ export default defineComponent({
     const { t } = useI18n();
     const route = useRoute();
 
-    const full = computed(() => route.meta.full);
+    const show = computed(() => route.meta.showFooter ?? true);
     const tabList = inject('goList');
     return {
       t,
-      full,
+      show,
       tabList,
     };
   },
 });
 </script>
+<style lang="scss" scoped>
+.body--light {
+  .tabs {
+    background: #fff;
+    color: #70757a;
+  }
+}
+
+.body--dark {
+  .tabs {
+    background: var(--q-dark);
+    color: #9aa0a6;
+  }
+}
+</style>

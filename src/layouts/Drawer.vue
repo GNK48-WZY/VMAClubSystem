@@ -1,32 +1,8 @@
 <template>
-  <q-drawer v-model="drawer" show-if-above elevated v-show="!full" :width="250" no-swipe-open>
-    <q-img
-      class="absolute-top"
-      :src="require('assets/image/background/drawer.png')"
-      style="height: 150px"
-    >
-      <div class="absolute-bottom bg-transparent">
-        <q-avatar size="56px" class="q-mb-sm" v-if="isLogin">
-          <img :src="!!user.avatar ? user.avatar : require('assets/image/user/avatar.png')" />
-        </q-avatar>
-        <div class="text-weight-bold">{{ isLogin ? user.name : t('user.notLogin') }}</div>
-        <div v-if="isLogin">{{ user.id }}</div>
-        <div v-if="isLogin">{{ user.email }}</div>
-        <q-btn
-          rounded
-          push
-          :color="isLogin ? 'red' : 'green'"
-          :label="t(`user.${isLogin ? 'logOut' : 'login'}`)"
-          @click="userBtnClick"
-          class="absolute-bottom-right"
-          style="margin:0 18px 18px 0;"
-        />
-      </div>
-    </q-img>
-
-    <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px">
+  <q-drawer v-model="drawer.model" show-if-above :mini="drawer.mini" :width="190">
+    <q-scroll-area class="fit">
       <q-list padding>
-        <q-item clickable v-ripple v-for="item in drawerList" :key="item.name" :to="item.to">
+        <q-item class="item" clickable v-ripple v-for="item in list" :key="item.name" :to="item.to">
           <q-item-section avatar>
             <q-icon :name="item.icon" />
           </q-item-section>
@@ -38,34 +14,62 @@
 </template>
 <script>
 import {
-  computed, defineComponent, inject,
+  computed, defineComponent, inject, watch,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useRoute, useRouter } from 'vue-router';
-import { useStore } from 'vuex';
+import { useRoute } from 'vue-router';
+import { useQuasar } from 'quasar';
 
 export default defineComponent({
   setup() {
     const { t } = useI18n();
     const route = useRoute();
-    const router = useRouter();
-    const store = useStore();
+    const quasar = useQuasar();
 
-    const full = computed(() => route.meta.full);
-    const user = computed(() => store.getters['user/user']);
-    const isLogin = computed(() => store.getters['user/isLogin']);
-    const userBtnClick = () => (isLogin.value ? store.dispatch('user/logout') : router.push({ name: 'Login', query: { redirect: route.path } }));
     const drawer = inject('drawer');
-    const drawerList = inject('goList');
+    const list = inject('goList');
+    const show = computed(() => route.meta.showDrawer ?? true);
+    watch(show, async (v) => {
+      if (quasar.screen.gt.sm) {
+        drawer.model = v;
+      } else if (!v) {
+        drawer.model = false;
+      }
+    });
     return {
       t,
-      full,
-      user,
-      isLogin,
-      userBtnClick,
-      drawerList,
+      list,
       drawer,
     };
   },
+
 });
 </script>
+<style lang="scss" scoped>
+.body--light {
+  .item {
+    color: #70757a;
+  }
+}
+
+.body--dark {
+  .item {
+    color: #9aa0a6;
+  }
+}
+.item {
+  &.q-router-link--active {
+    color: $primary;
+  }
+  .q-item__section {
+    letter-spacing: 0.01785714em;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+  }
+  margin: 8px 0;
+  line-height: 24px;
+  border-radius: 0 24px 24px 0;
+  margin-right: 12px;
+}
+</style>

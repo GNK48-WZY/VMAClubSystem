@@ -1,7 +1,5 @@
 <template>
-  <q-intersection transition="jump-up" once>
-    <Carousel :list="carouselList" />
-  </q-intersection>
+  <Carousel :list="carouselList" />
 
   <q-table
     grid
@@ -11,29 +9,27 @@
     :filter="filter"
     :no-data-label="t('club.noData')"
     :no-results-label="t('club.noResults')"
-    class="qt q-pa-md"
+    class="q-pa-md"
   >
     <template v-slot:header>
-      <q-intersection transition="slide-left" once class="q-ma-lg search">
-        <q-input
-          :bg-color="dark.isActive ? 'halfBlack' : 'halfWhite'"
-          color="primary"
-          outlined
-          rounded
-          debounce="300"
-          v-model="filter"
-          :label="t('club.search')"
-          clearable
-          clear-icon="close"
-        >
-          <template v-slot:prepend>
-            <q-icon name="search" />
-          </template>
-        </q-input>
-      </q-intersection>
+      <q-input
+        class="search"
+        color="primary"
+        outlined
+        rounded
+        debounce="300"
+        v-model="filter"
+        :label="t('club.search')"
+        clearable
+        clear-icon="close"
+      >
+        <template v-slot:prepend>
+          <q-icon name="search" />
+        </template>
+      </q-input>
     </template>
     <template v-slot:item="props">
-      <q-intersection class="col-md-3 col-sm-4 col-12 q-pa-md" transition="scale" once>
+      <q-intersection class="col-md-3 col-sm-4 col-12 q-pa-md">
         <Card
           :id="props.row.id"
           :name="props.row.name"
@@ -68,18 +64,18 @@ import Card from 'components/club/Card';
 export default defineComponent({
   setup() {
     const store = useStore();
-    const { dark } = useQuasar();
     const carouselList = computed(() => store.getters['clubs/carousel']);
     const clubList = computed(() => store.getters['clubs/list']);
     const { t } = useI18n();
+    const q = useQuasar();
 
     const filter = ref('');
     return {
-      dark,
       clubList,
       carouselList,
       t,
       filter,
+      q,
     };
   },
   components: {
@@ -89,21 +85,27 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
-.qt {
-  .search {
-    position: fixed;
-    z-index: 1;
-    right: 0;
-    top: 105px;
-    :deep(.q-field__control) {
-      backdrop-filter: saturate(180%) blur(20px);
-    }
-    :deep(.bg-halfBlack) {
-      background: rgba(0, 0, 0, 0.5);
-    }
-    :deep(.bg-halfWhite) {
-      background: rgba(255, 255, 255, 0.5);
-    }
+.search {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 90px;
+  right: 20px;
+  :deep(.q-field__control) {
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+}
+.body--light {
+  .search :deep(.q-field__control) {
+    background: rgba(255, 255, 255, 0.5);
+    color: #70757a;
+  }
+}
+
+.body--dark {
+  .search :deep(.q-field__control) {
+    background: rgba(0, 0, 0, 0.5);
+    color: #9aa0a6;
   }
 }
 </style>

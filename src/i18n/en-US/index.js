@@ -12,20 +12,23 @@ export default {
     UserCenter: 'User Center',
     Help: 'Help',
     ClubDetail: 'Club Detail',
-    Login: 'Login',
+    Sign: 'Sign',
   },
   router: {
     needAuth: 'Log in to continue',
-    authRedirect: 'You have logged in, Redirecting...',
+    authRedirect: 'You have signed in, Redirecting...',
   },
   store: {
-    logOutNeedAuth: 'You have logged out, Log in to continue browse this page',
-    logOut: 'You have logged out',
+    signOutNeedAuth: 'You have signed out, Sign in to continue browse this page',
+    signOut: 'You have signed out',
   },
   user: {
-    login: 'Login',
-    notLogin: 'Not logged in',
-    logOut: 'Log Out',
+    signIn: 'Sign In',
+    notSignIn: 'Not Signed in',
+    signOut: 'Sign Out',
+    manage: 'Manage your account',
+    policy: 'Privacy Policy',
+    service: 'Terms of Service',
   },
   club: {
     list: {
@@ -44,7 +47,7 @@ export default {
   404: {
     goTo: 'Go to ',
   },
-  login: {
+  sign: {
     title: 'Sign in to continue',
     plzInp: 'Please input ',
     back: 'Not now',
