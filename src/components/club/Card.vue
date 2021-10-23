@@ -21,7 +21,7 @@
       </router-link>
 
       <div class="row no-wrap items-center">
-        <div class="col text-h6 ellipsis text-black">{{ name }}</div>
+        <div class="col text-h6 ellipsis title">{{ name }}</div>
         <div class="col-auto text-grey text-caption q-pt-md row no-wrap items-center">
           <q-icon name="place" />
           {{ location }}
@@ -89,5 +89,16 @@ export default defineComponent({
 }
 .card {
   min-width: 230px;
+}
+.body--light {
+  .card .title {
+    color: #000;
+  }
+}
+
+.body--dark {
+  .card .title {
+    color: #fff;
+  }
 }
 </style>

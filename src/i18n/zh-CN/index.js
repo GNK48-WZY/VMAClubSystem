@@ -48,7 +48,8 @@ export default {
     goTo: '前往',
   },
   sign: {
-    title: '登录以继续',
+    title: '登入',
+    subtitle: '使用VMA账户',
     plzInp: '请输入',
     back: '暂不登录',
     types: {

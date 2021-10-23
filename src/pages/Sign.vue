@@ -272,7 +272,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .sign-warp {
   width: 100%;
-  height: calc(100vh);
+  height: 100%;
   @media (max-width: $breakpoint-xs-max) {
     .sign-container {
       height: 100%;

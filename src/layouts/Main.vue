@@ -14,7 +14,7 @@
 
 <script>
 import {
-  reactive, defineComponent, provide, ref, watch, computed,
+  reactive, defineComponent, provide, computed,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
@@ -30,24 +30,15 @@ export default defineComponent({
     const { t } = useI18n();
     const route = useRoute();
 
-    const routeName = ref('');
-
-    watch(computed(() => route.name), async (name) => {
-      routeName.value = t(`pages.${name}`);
-    });
-
-    const meta = {
-      title: routeName.value,
-      titleTemplate: (title) => `${title} - ${t('app.name')}`,
+    const meta = () => ({
+      title: t(`pages.${computed(() => route.name).value}`),
+      titleTemplate: (title) => `${title} | ${t('app.name')}`,
       meta: {
         description: { name: 'description', content: 'Page 1' },
         keywords: { name: 'keywords', content: 'Quasar website' },
         equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
       },
-      noscript: {
-        default: 'This is content for browsers with no JS (or disabled JS)',
-      },
-    };
+    });
     useMeta(meta);
 
     const drawer = reactive({

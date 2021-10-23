@@ -48,7 +48,8 @@ export default {
     goTo: 'Go to ',
   },
   sign: {
-    title: 'Sign in to continue',
+    title: 'Sign in',
+    subtitle: 'Use VMA account',
     plzInp: 'Please input ',
     back: 'Not now',
     types: {
