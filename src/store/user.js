@@ -50,7 +50,7 @@ export default {
         commit('setUser', {
           name: '测试用户',
           id: 123456,
-          email: 'test@vma.edu.cn',
+          email: 'test@stu.vma.edu.cn',
           token: 'test-token',
         });
         signInSuccess();
@@ -64,7 +64,7 @@ export default {
             url: '/login',
             method: 'post',
             data: {
-              email: `${email}@vma.edu.cn`,
+              email: `${email}@stu.vma.edu.cn`,
               password,
             },
           })
@@ -95,7 +95,7 @@ export default {
             data: {
               id,
               name,
-              email: `${email}@vma.edu.cn`,
+              email: `${email}@stu.vma.edu.cn`,
               password,
             },
           })

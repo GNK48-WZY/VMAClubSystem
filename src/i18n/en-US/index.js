@@ -48,14 +48,20 @@ export default {
     goTo: 'Go to ',
   },
   sign: {
-    title: 'Sign in',
-    subtitle: 'Use VMA account',
+    in: {
+      title: 'Sign in',
+      subtitle: 'Use VMA Account',
+      toggle: 'Create Account',
+      forget: 'Forget password',
+      submit: 'Sign in',
+    },
+    up: {
+      title: 'Create your VMA account',
+      toggle: 'Already have account',
+      submit: 'Sign up',
+    },
     plzInp: 'Please input ',
     back: 'Not now',
-    types: {
-      login: 'Login',
-      register: 'Register',
-    },
     forms: {
       email: 'Email',
       password: 'Password',

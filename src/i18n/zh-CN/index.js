@@ -48,14 +48,20 @@ export default {
     goTo: '前往',
   },
   sign: {
-    title: '登入',
-    subtitle: '使用VMA账户',
-    plzInp: '请输入',
-    back: '暂不登录',
-    types: {
-      login: '登录',
-      register: '注册',
+    in: {
+      title: '登入',
+      subtitle: '使用 VMA 账户',
+      toggle: '建立账户',
+      forget: '忘记密码',
+      submit: '登入',
     },
+    up: {
+      title: '建立您的 VMA 账户',
+      toggle: '已有账户',
+      submit: '注册',
+    },
+    plzInp: '请输入',
+    back: '暂不登入',
     forms: {
       email: '邮箱',
       password: '密码',

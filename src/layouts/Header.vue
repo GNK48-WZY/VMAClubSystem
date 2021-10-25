@@ -21,14 +21,14 @@
         <LanguageSwitcher />
         <q-btn round flat v-if="isSignIn">
           <q-avatar size="26px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+            <q-img :src="user.avatar || require('assets/image/user/avatar.png')" />
           </q-avatar>
           <q-tooltip>Account</q-tooltip>
           <q-popup-proxy :offset="[0, 20]" transition-show="jump-down" transition-hide="jump-up">
             <q-card flat bordered class="user-card">
               <div class="avatar-container column">
                 <q-avatar size="80px" class="col self-center" v-if="isSignIn">
-                  <img :src="user.avatar || require('assets/image/user/avatar.png')" />
+                  <q-img :src="user.avatar || require('assets/image/user/avatar.png')" />
                 </q-avatar>
                 <div class="q-mt-md text-weight-bold col self-center">{{ user.name }}</div>
                 <div class="col self-center">{{ user.id }}</div>

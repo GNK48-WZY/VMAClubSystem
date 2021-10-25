@@ -56,7 +56,6 @@ import {
   computed, ref, defineComponent,
 } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useQuasar } from 'quasar';
 
 import Carousel from 'components/club/Carousel';
 import Card from 'components/club/Card';
@@ -67,7 +66,6 @@ export default defineComponent({
     const carouselList = computed(() => store.getters['clubs/carousel']);
     const clubList = computed(() => store.getters['clubs/list']);
     const { t } = useI18n();
-    const q = useQuasar();
 
     const filter = ref('');
     return {
@@ -75,7 +73,6 @@ export default defineComponent({
       carouselList,
       t,
       filter,
-      q,
     };
   },
   components: {
