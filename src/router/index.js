@@ -10,12 +10,15 @@ const { global: { t } } = i18n;
 const createHistory = process.env.SERVER
   ? createMemoryHistory
   : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory);
+
 const Router = createRouter({
   scrollBehavior: () => ({ left: 0, top: 0 }),
   routes,
   history: createHistory(process.env.MODE === 'ssr' ? void 0 : process.env.VUE_ROUTER_BASE),
 });
+
 export { Router };
+
 export default route(({ store }) => {
   Router.beforeEach((to, _from, next) => {
     function startContinue() {
