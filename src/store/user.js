@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/browser';
 import { api } from 'boot/axios';
 import { Router } from 'src/router';
 import { Notify } from 'quasar';
@@ -5,7 +6,8 @@ import { i18n } from 'src/boot/i18n';
 
 const { global: { t } } = i18n;
 
-async function signInSuccess() {
+async function signInSuccess(user) {
+  Sentry.setUser(user);
   Notify.create({
     type: 'positive',
     message: t('sign.message.success'),
@@ -47,13 +49,14 @@ export default {
   actions: {
     async mockSignIn({ commit }) {
       return new Promise((resolve) => {
-        commit('setUser', {
+        const user = {
           name: '测试用户',
           id: 123456,
           email: 'test@stu.vma.edu.cn',
           token: 'test-token',
-        });
-        signInSuccess();
+        };
+        commit('setUser', user);
+        signInSuccess(user);
         resolve();
       });
     },
@@ -71,7 +74,7 @@ export default {
             .then((response) => response.data)
             .then((data) => {
               commit('setUser', data);
-              signInSuccess();
+              signInSuccess(data);
               resolve(data);
             })
             .catch((error) => {
@@ -102,7 +105,7 @@ export default {
             .then((response) => response.data)
             .then((data) => {
               commit('setUser', data);
-              signInSuccess();
+              signInSuccess(data);
               resolve(data);
             })
             .catch((error) => {
@@ -117,6 +120,7 @@ export default {
     },
     async signOut({ commit }) {
       commit('setUser', { user: { token: false } });
+      Sentry.configureScope((scope) => scope.setUser(null));
       if (Router.currentRoute.value.meta.needAuth) {
         Router.push({ name: 'Sign', query: { redirect: Router.currentRoute.value.path } });
         Notify.create({

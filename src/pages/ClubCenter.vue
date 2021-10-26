@@ -29,7 +29,7 @@
       </q-input>
     </template>
     <template v-slot:item="props">
-      <q-intersection class="col-md-3 col-sm-4 col-12 q-pa-md">
+      <div class="col-md-3 col-sm-4 col-12 q-pa-md">
         <Card
           :id="props.row.id"
           :name="props.row.name"
@@ -38,7 +38,7 @@
           :description="props.row.description"
           :location="props.row.location"
         />
-      </q-intersection>
+      </div>
     </template>
     <template v-slot:no-data="{ message }">
       <div class="text-primary column fit">
