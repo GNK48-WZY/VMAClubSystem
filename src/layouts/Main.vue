@@ -31,7 +31,7 @@ export default defineComponent({
     const route = useRoute();
 
     const meta = () => ({
-      title: t(`pages.${computed(() => route.name).value}`),
+      title: computed(() => t(route.name ? `pages.${route.name}` : 'information.error')).value,
       titleTemplate: (title) => `${title} | ${t('app.name')}`,
       meta: {
         description: { name: 'description', content: 'Page 1' },
